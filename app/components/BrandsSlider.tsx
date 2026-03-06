@@ -41,7 +41,7 @@ function LogoCard({ src }: { src: string }) {
 
 export default function BrandsSlider() {
   return (
-    <section className="border-t border-slate-700/80 bg-slate-900 py-12 lg:py-16">
+    <section className="overflow-x-hidden border-t border-slate-700/80 bg-slate-900 py-12 lg:py-16">
       <div className="mx-auto max-w-7xl px-4 lg:px-12">
         <p className="mb-6 text-center text-sm font-semibold uppercase tracking-wider text-slate-400">Trusted by industry leaders</p>
         <div className="overflow-hidden rounded-2xl border border-slate-600/80 bg-slate-800 py-8 shadow-depth">
