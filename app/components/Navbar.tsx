@@ -90,7 +90,7 @@ export default function Navbar() {
         boxShadow: scrolled ? "0 1px 3px 0 rgba(0,0,0,0.2)" : "0 0 0 0 transparent",
       }}
       transition={headerTransition}
-      className={`sticky top-0 z-50 overflow-x-hidden border-b border-transparent px-6 py-3.5 lg:px-12 ${
+      className={`sticky top-0 z-[100] overflow-visible border-b border-transparent px-6 py-3.5 lg:px-12 ${
         scrolled ? "w-full" : "w-[90%] mx-auto rounded-2xl mt-4"
       }`}
     >
@@ -151,7 +151,7 @@ export default function Navbar() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: -8, scale: 0.96 }}
                         transition={dropdownTransition}
-                        className="absolute left-0 top-full pt-2 min-w-[180px] origin-top-left"
+                        className="absolute left-0 top-full z-[100] pt-2 min-w-[220px] origin-top-left"
                       >
                         <div className="rounded-xl border border-slate-600/80 bg-slate-800/95 py-2 shadow-lg shadow-slate-900/50 backdrop-blur-xl">
                           {item.dropdown.map((d, j) => {
@@ -259,14 +259,14 @@ export default function Navbar() {
             <motion.button
               type="button"
               aria-label="Close menu overlay"
-              className="fixed inset-0 z-50 bg-black/60 md:hidden"
+              className="fixed inset-0 z-50 bg-slate-950 backdrop-blur-xl md:hidden"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setMobileOpen(false)}
             />
             <motion.aside
-              className="fixed right-0 top-0 z-50 h-full w-[88vw] max-w-sm border-l border-slate-700/80 bg-slate-900/95 backdrop-blur-xl md:hidden"
+              className="fixed right-0 top-0 z-50 h-full w-[88vw] max-w-sm border-l border-slate-700/80 bg-slate-950 backdrop-blur-xl md:hidden"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
@@ -276,7 +276,7 @@ export default function Navbar() {
                 <span className="text-sm font-semibold tracking-wide text-slate-200">Menu</span>
                 <button
                   type="button"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-700/80 bg-slate-800/70 text-slate-200"
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-700/80 bg-slate-800 text-slate-200"
                   aria-label="Close menu"
                   onClick={() => setMobileOpen(false)}
                 >
@@ -286,7 +286,7 @@ export default function Navbar() {
                 </button>
               </div>
 
-              <div className="px-5 py-4">
+              <div className="px-5 py-4 bg-slate-900 backdrop-blur-xl">
                 <div className="space-y-2">
                   {navItems.map((item) => {
                     if (!hasDropdown(item)) {
@@ -294,7 +294,7 @@ export default function Navbar() {
                         <Link
                           key={item.label}
                           href={item.href}
-                          className="flex items-center justify-between rounded-xl border border-slate-700/80 bg-slate-800/50 px-4 py-3 text-sm font-medium text-slate-200"
+                          className="flex items-center justify-between rounded-xl border border-slate-700/80 bg-slate-800/90 px-4 py-3 text-sm font-medium text-slate-200"
                           onClick={() => setMobileOpen(false)}
                         >
                           {item.label}
@@ -307,7 +307,7 @@ export default function Navbar() {
 
                     const isOpen = mobileSection === item.label;
                     return (
-                      <div key={item.label} className="rounded-xl border border-slate-700/80 bg-slate-800/50">
+                      <div key={item.label} className="rounded-xl border border-slate-700/80 bg-slate-800/90">
                         <button
                           type="button"
                           className="flex w-full items-center justify-between px-4 py-3 text-sm font-semibold text-slate-200"
@@ -353,6 +353,17 @@ export default function Navbar() {
                 </div>
 
                 <Link
+                  href="/all-pages"
+                  className="mt-4 flex items-center justify-between rounded-xl border border-slate-700/80 bg-slate-800/90 px-4 py-3 text-sm font-medium text-slate-200"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  All Pages
+                  <span className="text-slate-400" aria-hidden>
+                    →
+                  </span>
+                </Link>
+
+                <Link
                   href="/contact"
                   className="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-cyan-600 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-cyan-500/15 transition hover:bg-cyan-500"
                   onClick={() => setMobileOpen(false)}
@@ -366,4 +377,4 @@ export default function Navbar() {
       </AnimatePresence>
     </motion.header>
   );
-}
+} 
