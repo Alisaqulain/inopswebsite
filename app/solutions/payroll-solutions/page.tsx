@@ -114,7 +114,7 @@ function ServiceIcon({ icon }: { icon: string }) {
 export default function PayrollSolutionsPage() {
   return (
     <>
-      <div className="min-h-screen bg-[var(--background)]">
+      <div className="min-h-screen bg-white text-gray-900">
         {/* Hero – dark with abstract geometric backdrop */}
         <motion.section
           className="relative min-h-[320px] flex flex-col items-center justify-center overflow-hidden"
@@ -122,7 +122,7 @@ export default function PayrollSolutionsPage() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="absolute inset-0 bg-slate-800" />
+          <div className="absolute inset-0 bg-gray-900" />
           <div className="absolute inset-0 opacity-20">
             <Image
               src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1600&q=60"
@@ -133,8 +133,8 @@ export default function PayrollSolutionsPage() {
               priority
             />
           </div>
-          <div className="absolute inset-0 bg-slate-900/80" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(6,182,212,0.12),transparent)]" />
+          <div className="absolute inset-0 bg-gray-900/70" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(6,182,212,0.15),transparent)]" />
           <div className="relative z-10 text-center px-6">
             <motion.h1
               className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl"
@@ -145,26 +145,26 @@ export default function PayrollSolutionsPage() {
               Payroll Solutions
             </motion.h1>
             <motion.nav
-              className="mt-4 text-sm text-white/90"
+              className="mt-4 text-sm text-white"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: smoothEase, delay: 0.25 }}
               aria-label="Breadcrumb"
             >
-              <Link href="/" className="hover:text-white transition-colors">
+              <Link href="/" className="text-white hover:text-white/90 transition-colors">
                 Home
               </Link>
-              <span className="mx-2 text-white/60">/</span>
-              <span className="text-cyan-300 font-medium">Payroll Solutions</span>
+              <span className="mx-2 text-white/80">/</span>
+              <span className="text-blue-400 font-medium">Payroll Solutions</span>
             </motion.nav>
           </div>
         </motion.section>
 
         {/* Intro – title, underline, paragraph */}
-        <section className="py-12 lg:py-16 bg-slate-900 border-t border-slate-700/80">
+        <section className="py-12 lg:py-16 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-4xl px-6 lg:px-12 text-center">
             <motion.h2
-              className="text-2xl font-bold text-white sm:text-3xl"
+              className="text-2xl font-bold text-gray-900 sm:text-3xl"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -172,9 +172,9 @@ export default function PayrollSolutionsPage() {
             >
               Payroll Solutions
             </motion.h2>
-            <div className="mx-auto mt-2 h-0.5 w-24 rounded-full bg-cyan-500" aria-hidden />
+            <div className="mx-auto mt-2 h-0.5 w-24 rounded-full bg-blue-500" aria-hidden />
             <motion.p
-              className="mt-6 text-slate-300 leading-relaxed text-base sm:text-lg"
+              className="mt-6 text-gray-600 leading-relaxed text-base sm:text-lg"
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -186,7 +186,7 @@ export default function PayrollSolutionsPage() {
         </section>
 
         {/* Highlights of our payroll services – central oval + pills */}
-        <section className="py-16 lg:py-24 bg-slate-800/50 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-6xl px-6 lg:px-12">
             <motion.div
               className="relative flex flex-col items-center gap-8 lg:flex-row lg:justify-center lg:gap-10 xl:gap-14 lg:items-stretch"
@@ -200,7 +200,7 @@ export default function PayrollSolutionsPage() {
                 {payrollHighlights.slice(0, 5).map((text, i) => (
                   <div
                     key={i}
-                    className={`rounded-full px-4 py-2.5 text-sm font-medium text-slate-900 border border-slate-600/80 ${i < 2 ? "bg-cyan-400/90" : "bg-violet-400/90"}`}
+                    className={`rounded-full px-4 py-2.5 text-sm font-medium text-gray-900 border border-gray-200 ${i < 2 ? "bg-blue-400/90" : "bg-violet-400/90"}`}
                   >
                     {text}
                   </div>
@@ -208,8 +208,8 @@ export default function PayrollSolutionsPage() {
               </div>
               {/* Central oval with gradient border */}
               <div className="flex-shrink-0 flex items-center justify-center">
-                <div className="rounded-full bg-gradient-to-r from-cyan-400 to-violet-500 p-[2px]">
-                  <div className="rounded-full bg-slate-800 px-6 py-3.5 sm:px-8 sm:py-4">
+                <div className="rounded-full bg-gradient-to-r from-blue-400 to-violet-500 p-[2px]">
+                  <div className="rounded-full bg-gray-800 px-6 py-3.5 sm:px-8 sm:py-4">
                     <span className="text-white font-bold text-sm sm:text-base uppercase tracking-wide whitespace-nowrap">
                       Highlights of our payroll services
                     </span>
@@ -221,7 +221,7 @@ export default function PayrollSolutionsPage() {
                 {payrollHighlights.slice(5, 10).map((text, i) => (
                   <div
                     key={i}
-                    className="rounded-full px-4 py-2.5 text-sm font-medium text-slate-900 bg-violet-400/90 border border-slate-600/80"
+                    className="rounded-full px-4 py-2.5 text-sm font-medium text-gray-900 bg-violet-400/90 border border-gray-200"
                   >
                     {text}
                   </div>
@@ -232,7 +232,7 @@ export default function PayrollSolutionsPage() {
         </section>
 
         {/* Main content – infographic left, text right */}
-        <section className="py-16 lg:py-24 bg-slate-900 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
               {/* Left – circular infographic: six must-have features */}
@@ -366,13 +366,13 @@ export default function PayrollSolutionsPage() {
                 viewport={viewport}
                 transition={{ duration: 0.6, ease: smoothEase, delay: 0.1 }}
               >
-                <h2 className="text-2xl font-bold text-white sm:text-3xl lg:text-4xl">
+                <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl lg:text-4xl">
                   Payroll Solutions
                 </h2>
-                <p className="mt-6 text-slate-300 leading-relaxed text-base sm:text-lg">
+                <p className="mt-6 text-gray-600 leading-relaxed text-base sm:text-lg">
                   Welcome to InOps Company&apos;s payroll solutions, where we revolutionize the way organizations manage their payroll processes.
                 </p>
-                <p className="mt-4 text-slate-300 leading-relaxed text-base sm:text-lg">
+                <p className="mt-4 text-gray-600 leading-relaxed text-base sm:text-lg">
                   Our comprehensive payroll system is designed to simplify payroll administration, enhance accuracy, and ensure compliance with regulations. Explore the eight key features and their corresponding benefits:
                 </p>
               </motion.div>
@@ -381,10 +381,10 @@ export default function PayrollSolutionsPage() {
         </section>
 
         {/* Features & Benefits */}
-        <section className="py-16 lg:py-24 bg-slate-800/50 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <motion.h2
-              className="text-center text-2xl font-bold text-white sm:text-3xl"
+              className="text-center text-2xl font-bold text-gray-900 sm:text-3xl"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -392,7 +392,7 @@ export default function PayrollSolutionsPage() {
             >
               Features & Benefits
             </motion.h2>
-            <div className="mx-auto mt-2 h-0.5 w-20 rounded-full bg-cyan-500" aria-hidden />
+            <div className="mx-auto mt-2 h-0.5 w-20 rounded-full bg-blue-500" aria-hidden />
             <div className="mt-14 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-x-16 lg:gap-y-12">
               {featuresAndBenefits.map((item, i) => (
                 <motion.div
@@ -407,9 +407,9 @@ export default function PayrollSolutionsPage() {
                     <CheckIcon className="h-5 w-5 text-white" />
                   </span>
                   <div className="space-y-2">
-                    <h3 className="font-bold text-slate-100">{item.title}</h3>
-                    <p className="text-slate-300 text-sm leading-relaxed">{item.description}</p>
-                    <p className="font-semibold text-cyan-300 text-sm">{item.benefit}</p>
+                    <h3 className="font-bold text-gray-900">{item.title}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+                    <p className="font-semibold text-blue-300 text-sm">{item.benefit}</p>
                   </div>
                 </motion.div>
               ))}
@@ -418,10 +418,10 @@ export default function PayrollSolutionsPage() {
         </section>
 
         {/* Powerful Services for Your Business */}
-        <section className="py-16 lg:py-24 bg-slate-900 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <motion.h2
-              className="text-2xl font-bold text-white sm:text-3xl"
+              className="text-2xl font-bold text-gray-900 sm:text-3xl"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -429,12 +429,12 @@ export default function PayrollSolutionsPage() {
             >
               Powerful Services for Your Business
             </motion.h2>
-            <div className="mt-2 h-0.5 w-20 rounded-full bg-cyan-500" />
+            <div className="mt-2 h-0.5 w-20 rounded-full bg-blue-500" />
             <div className="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {powerfulServices.map((service, i) => (
                 <motion.div
                   key={service.title}
-                  className="flex items-start gap-4 rounded-xl border border-slate-600/80 bg-slate-800/80 p-6 backdrop-blur-sm"
+                  className="flex items-start gap-4 rounded-xl border border-gray-200 bg-white p-6 backdrop-blur-sm"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={viewport}
@@ -443,7 +443,7 @@ export default function PayrollSolutionsPage() {
                   <span className={`flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg ${service.color} text-white`}>
                     <ServiceIcon icon={service.icon} />
                   </span>
-                  <h3 className="font-semibold text-slate-100">{service.title}</h3>
+                  <h3 className="font-semibold text-gray-900">{service.title}</h3>
                 </motion.div>
               ))}
             </div>
@@ -451,7 +451,7 @@ export default function PayrollSolutionsPage() {
         </section>
 
         {/* Empowering Smarter Workplaces + phone mockup */}
-        <section className="py-16 lg:py-24 bg-slate-800/50 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
               <motion.div
@@ -461,15 +461,15 @@ export default function PayrollSolutionsPage() {
                 viewport={viewport}
                 transition={{ duration: 0.6, ease: smoothEase }}
               >
-                <h2 className="text-2xl font-bold text-cyan-400 sm:text-3xl">
+                <h2 className="text-2xl font-bold text-blue-400 sm:text-3xl">
                   Empowering Smarter Workplaces Across all Industries
                 </h2>
-                <p className="mt-6 text-slate-300 leading-relaxed text-base sm:text-lg">
+                <p className="mt-6 text-gray-600 leading-relaxed text-base sm:text-lg">
                   InOps Tech empowers smarter workplaces across diverse industries by providing innovative technology solutions tailored to optimize efficiency, collaboration, and productivity.
                 </p>
                 <Link
                   href="/contact"
-                  className="mt-8 inline-flex items-center rounded-xl bg-cyan-600 px-6 py-3 font-semibold text-white shadow-lg shadow-cyan-500/25 transition hover:bg-cyan-500"
+                  className="mt-8 inline-flex items-center rounded-xl bg-blue-500 px-6 py-3 font-semibold text-white shadow-lg transition hover:bg-blue-600"
                 >
                   Get Started
                 </Link>
@@ -481,11 +481,11 @@ export default function PayrollSolutionsPage() {
                 viewport={viewport}
                 transition={{ duration: 0.6, ease: smoothEase, delay: 0.1 }}
               >
-                <div className="relative w-[280px] rounded-[2.5rem] border-[10px] border-slate-800 bg-slate-800 p-2 shadow-2xl">
-                  <div className="absolute left-1/2 top-0 h-6 w-24 -translate-x-1/2 rounded-b-2xl bg-slate-800" aria-hidden />
-                  <div className="overflow-hidden rounded-[1.5rem] bg-slate-800 border border-slate-600/80">
-                    <div className="bg-slate-700/80 px-4 py-3 border-b border-slate-600/80">
-                      <span className="font-semibold text-slate-100 text-sm">My Attendance</span>
+                <div className="relative w-[280px] rounded-[2.5rem] border-[10px] border-gray-800 bg-gray-100 p-2 shadow-2xl">
+                  <div className="absolute left-1/2 top-0 h-6 w-24 -translate-x-1/2 rounded-b-2xl bg-gray-100" aria-hidden />
+                  <div className="overflow-hidden rounded-[1.5rem] bg-gray-100 border border-gray-200">
+                    <div className="bg-gray-200/80 px-4 py-3 border-b border-gray-200">
+                      <span className="font-semibold text-gray-900 text-sm">My Attendance</span>
                     </div>
                     <div className="px-3 py-2 text-xs text-slate-400 text-center">15-JAN-2023 - 15-JAN-2023</div>
                     <div className="px-3 pb-2 space-y-2">
@@ -497,11 +497,11 @@ export default function PayrollSolutionsPage() {
                       ].map((item, i) => (
                         <div key={i} className="flex items-center gap-2 text-sm">
                           <span className={`w-1 h-8 rounded-full ${item.color}`} aria-hidden />
-                          <span className="text-slate-200">{item.time}</span>
+                          <span className="text-gray-700">{item.time}</span>
                         </div>
                       ))}
                     </div>
-                    <div className="p-3 border-t border-slate-600/80 text-center text-sm text-slate-400">Total Hours 09:43</div>
+                    <div className="p-3 border-t border-gray-200 text-center text-sm text-slate-400">Total Hours 09:43</div>
                   </div>
                 </div>
               </motion.div>

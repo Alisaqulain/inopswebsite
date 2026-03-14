@@ -20,7 +20,7 @@ const slides = [
       "Secure Cloud-Based Storage — encrypted, high-availability workforce records.",
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80",
+      "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=85",
   },
   {
     title: "Real-Time Visibility & Control Across Your Workforce",
@@ -32,7 +32,7 @@ const slides = [
       "Smart shift & workforce allocation tools.",
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=85",
   },
 ];
 
@@ -50,15 +50,10 @@ export default function FeaturesSlider() {
   const slide = slides[current];
 
   return (
-    <section className="py-20 bg-[var(--background)]">
-      <div className="max-w-7xl mx-auto px-6">
-
-        <div className="bg-slate-800 rounded-2xl shadow-xl border border-slate-600 overflow-hidden">
-
-          {/* MAIN FLEX LAYOUT - fly-in: text from left, image from right */}
+    <section className="py-28 lg:py-40 bg-white">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="rounded-2xl border border-gray-200 bg-white shadow-lg overflow-hidden">
           <div className="flex flex-col md:flex-row items-stretch">
-
-            {/* LEFT CONTENT - flies in from left */}
             <motion.div
               className="flex-1 p-8 lg:p-12"
               initial={{ opacity: 0, x: -50 }}
@@ -67,7 +62,7 @@ export default function FeaturesSlider() {
               transition={{ duration: 0.7, ease: smoothEase }}
             >
               <motion.h2
-                className="text-2xl lg:text-3xl font-bold text-white"
+                className="text-2xl lg:text-3xl font-bold text-gray-900"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={viewport}
@@ -98,20 +93,10 @@ export default function FeaturesSlider() {
                     }}
                     transition={{ duration: 0.5, ease: smoothEase }}
                   >
-                    <motion.span
-                      className="mt-1 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-cyan-500/20 text-cyan-300 text-xs font-bold"
-                      animate={{ y: [-5, 5] }}
-                      transition={{
-                        duration: 3.2,
-                        repeat: Infinity,
-                        repeatType: "reverse",
-                        ease: [0.65, 0, 0.35, 1],
-                        delay: i * 0.08,
-                      }}
-                    >
+                    <span className="mt-1 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-600 text-xs font-button">
                       ✓
-                    </motion.span>
-                    <span className="text-slate-300 text-sm lg:text-base leading-relaxed">
+                    </span>
+                    <span className="text-gray-600 text-sm lg:text-base leading-relaxed">
                       {text}
                     </span>
                   </motion.li>
@@ -119,20 +104,18 @@ export default function FeaturesSlider() {
               </motion.ul>
             </motion.div>
 
-            {/* RIGHT IMAGE - flies in from right */}
             <motion.div
-              className="w-full md:w-[320px] flex-shrink-0 bg-slate-700/50 border-t md:border-t-0 md:border-l border-slate-600 p-4 flex items-center justify-center"
+              className="w-full md:w-[320px] flex-shrink-0 bg-gray-50 border-t md:border-t-0 md:border-l border-gray-200 p-4 flex items-center justify-center"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={viewport}
               transition={{ duration: 0.7, ease: smoothEase, delay: 0.15 }}
             >
-              <div className="relative w-full h-[180px] rounded-xl overflow-hidden shadow-md">
-                {/* Browser bar */}
-                <div className="absolute top-0 left-0 right-0 h-7 bg-slate-600 flex items-center px-3 gap-2 z-10">
-                  <span className="w-2 h-2 bg-slate-400 rounded-full"></span>
-                  <span className="w-2 h-2 bg-slate-400 rounded-full"></span>
-                  <span className="w-2 h-2 bg-slate-400 rounded-full"></span>
+              <div className="relative w-full h-[180px] rounded-xl overflow-hidden shadow-md border border-gray-200">
+                <div className="absolute top-0 left-0 right-0 h-7 bg-gray-100 border-b border-gray-200 flex items-center px-3 gap-2 z-10">
+                  <span className="w-2 h-2 bg-gray-300 rounded-full"></span>
+                  <span className="w-2 h-2 bg-gray-300 rounded-full"></span>
+                  <span className="w-2 h-2 bg-gray-300 rounded-full"></span>
                 </div>
 
                 <Image
@@ -143,13 +126,9 @@ export default function FeaturesSlider() {
                 />
               </div>
             </motion.div>
-
           </div>
 
-          {/* NAVIGATION */}
-          <div className="flex items-center justify-between px-6 py-4 border-t border-slate-200 bg-slate-50">
-
-            {/* Dots */}
+          <div className="flex items-center justify-between px-6 py-4 border-t border-gray-100 bg-gray-50">
             <div className="flex gap-2">
               {slides.map((_, index) => (
                 <button
@@ -157,33 +136,29 @@ export default function FeaturesSlider() {
                   onClick={() => setCurrent(index)}
                   className={`h-2 rounded-full transition-all duration-300 ${
                     index === current
-                      ? "w-8 bg-cyan-600"
-                      : "w-2 bg-slate-300"
+                      ? "w-8 bg-blue-500"
+                      : "w-2 bg-gray-300"
                   }`}
                 />
               ))}
             </div>
 
-            {/* Buttons */}
             <div className="flex gap-3">
               <button
                 onClick={goPrev}
-                className="h-9 w-9 rounded-full border border-slate-500 bg-slate-700 text-slate-300 hover:bg-cyan-500/20 hover:text-cyan-300 transition"
+                className="h-9 w-9 rounded-full border border-gray-200 bg-white text-gray-600 hover:bg-blue-50 hover:border-blue-200 hover:text-blue-600 transition shadow-sm"
               >
                 ‹
               </button>
               <button
                 onClick={goNext}
-                className="h-9 w-9 rounded-full border border-slate-500 bg-slate-700 text-slate-300 hover:bg-cyan-500/20 hover:text-cyan-300 transition"
+                className="h-9 w-9 rounded-full border border-gray-200 bg-white text-gray-600 hover:bg-blue-50 hover:border-blue-200 hover:text-blue-600 transition shadow-sm"
               >
                 ›
               </button>
             </div>
-
           </div>
-
         </div>
-
       </div>
     </section>
   );

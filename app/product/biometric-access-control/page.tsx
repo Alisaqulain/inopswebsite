@@ -34,7 +34,7 @@ const featuresLeft = [
   },
   {
     title: "Integration Capabilities",
-    color: "text-cyan-500",
+    color: "text-blue-500",
     points: [
       "Compatible with existing access control systems for seamless integration.",
       { label: "Cost-Effective:", text: "Reduces the costs associated with managing and replacing physical credentials such as cards or keys." },
@@ -104,7 +104,7 @@ const powerfulServices = [
 export default function BiometricAccessControlPage() {
   return (
     <>
-      <div className="min-h-screen bg-[var(--background)]">
+      <div className="min-h-screen bg-white text-gray-900">
         {/* Hero section - dark blue-grey with illustrations */}
         <motion.section
           className="relative min-h-[320px] flex flex-col items-center justify-center overflow-hidden"
@@ -112,7 +112,7 @@ export default function BiometricAccessControlPage() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="absolute inset-0 bg-slate-800" />
+          <div className="absolute inset-0 bg-gray-900" />
           <div
             className="absolute inset-0 opacity-20"
             style={{
@@ -123,19 +123,19 @@ export default function BiometricAccessControlPage() {
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div className="absolute left-[10%] top-1/2 -translate-y-1/2 w-32 h-40 rounded-lg bg-amber-900/30 border border-amber-700/20" aria-hidden />
             <div className="absolute right-[20%] top-1/2 -translate-y-1/2 flex flex-col items-center gap-1">
-              <div className="w-16 h-20 rounded-lg bg-slate-600/40 border border-slate-500/30 flex flex-col items-center justify-center p-1">
-                <div className="w-full h-6 rounded bg-slate-500/50 text-[8px] text-slate-300 flex items-center justify-center font-mono">ACCESS</div>
+              <div className="w-16 h-20 rounded-lg bg-gray-700/40 border border-gray-600/30 flex flex-col items-center justify-center p-1">
+                <div className="w-full h-6 rounded bg-gray-600/50 text-[8px] text-gray-600 flex items-center justify-center font-mono">ACCESS</div>
                 <div className="w-full flex-1 rounded bg-emerald-500/20 text-[8px] text-emerald-300 flex items-center justify-center font-mono mt-1">COMPLETE</div>
               </div>
               <div className="flex gap-0.5">
                 {[1, 2, 3].map((i) => (
-                  <div key={i} className="w-1 h-8 bg-cyan-400/20 rounded-full" style={{ animationDelay: `${i * 0.1}s` }} />
+                  <div key={i} className="w-1 h-8 bg-blue-400/20 rounded-full" style={{ animationDelay: `${i * 0.1}s` }} />
                 ))}
               </div>
             </div>
-            <div className="absolute right-[8%] top-1/3 w-24 h-16 rounded bg-slate-600/30 border border-slate-500/20" aria-hidden />
+            <div className="absolute right-[8%] top-1/3 w-24 h-16 rounded bg-gray-700/30 border border-gray-600/20" aria-hidden />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-transparent to-slate-800/60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/40 via-transparent to-gray-800/60" />
           <div className="relative z-10 text-center px-6">
             <motion.h1
               className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl"
@@ -156,13 +156,13 @@ export default function BiometricAccessControlPage() {
                 Home
               </Link>
               <span className="mx-2 text-white/60">/</span>
-              <span className="text-cyan-300 font-medium">Biometric Access Control</span>
+              <span className="text-blue-300 font-medium">Biometric Access Control</span>
             </motion.nav>
           </div>
         </motion.section>
 
         {/* Main content - two columns: device image left, text + CTAs right */}
-        <section className="py-16 lg:py-24 bg-slate-900 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
               {/* Left: biometric device image */}
@@ -173,7 +173,7 @@ export default function BiometricAccessControlPage() {
                 viewport={viewport}
                 transition={{ duration: 0.7, ease: smoothEase }}
               >
-                <div className="relative aspect-[4/3] max-w-xl mx-auto lg:max-w-none rounded-2xl overflow-hidden shadow-2xl border border-slate-600/80 bg-slate-800">
+                <div className="relative aspect-[4/3] max-w-xl mx-auto lg:max-w-none rounded-2xl overflow-hidden shadow-2xl border border-gray-200 bg-gray-100">
                   <Image
                     src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=85"
                     alt="Biometric access control device with face recognition and keypad"
@@ -193,28 +193,28 @@ export default function BiometricAccessControlPage() {
                 viewport={viewport}
                 transition={{ duration: 0.7, ease: smoothEase, delay: 0.1 }}
               >
-                <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl">
+                <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl lg:text-4xl">
                   Biometric Access Control
                 </h2>
-                <p className="mt-6 text-slate-300 leading-relaxed text-base sm:text-lg">
+                <p className="mt-6 text-gray-600 leading-relaxed text-base sm:text-lg">
                   Inops offers a comprehensive range of biometric access control products, including Face Reader, Fingerprint Reader, and Card Reader solutions, designed to provide robust security and streamlined access management for various environments. Here are the features and benefits of each:
                 </p>
                 <div className="mt-8 flex flex-wrap items-center gap-4 sm:gap-6">
                   <Link
                     href="#"
-                    className="inline-flex items-center font-semibold text-cyan-400 hover:text-cyan-300 transition-colors uppercase tracking-wide text-sm"
+                    className="inline-flex items-center font-semibold text-blue-500 hover:text-blue-300 transition-colors uppercase tracking-wide text-sm"
                   >
                     Download Brochure
                   </Link>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
+                    className="inline-flex items-center gap-2 font-semibold text-blue-500 hover:text-blue-300 transition-colors"
                   >
                     Get Started
                   </Link>
                   <Link
                     href="#"
-                    className="inline-flex items-center gap-2 font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
+                    className="inline-flex items-center gap-2 font-semibold text-blue-500 hover:text-blue-300 transition-colors"
                   >
                     <svg className="h-5 w-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
                       <path d="M8 5v14l11-7z" />
@@ -228,10 +228,10 @@ export default function BiometricAccessControlPage() {
         </section>
 
         {/* Features & Benefits */}
-        <section className="py-16 lg:py-24 bg-slate-800/50 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <motion.h2
-              className="text-center text-2xl font-bold text-white sm:text-3xl"
+              className="text-center text-2xl font-bold text-gray-900 sm:text-3xl"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -240,7 +240,7 @@ export default function BiometricAccessControlPage() {
               Features & Benefits
             </motion.h2>
             <motion.div
-              className="mx-auto mt-2 h-1 w-20 rounded-full bg-cyan-500"
+              className="mx-auto mt-2 h-1 w-20 rounded-full bg-blue-500"
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               viewport={viewport}
@@ -262,14 +262,14 @@ export default function BiometricAccessControlPage() {
                       <CheckIcon className={`h-6 w-6 ${item.color}`} />
                     </span>
                     <div className="space-y-2">
-                      <h3 className="font-bold text-slate-100">{item.title}</h3>
-                      <ul className="space-y-2 text-slate-300 text-sm leading-relaxed">
+                      <h3 className="font-bold text-gray-900">{item.title}</h3>
+                      <ul className="space-y-2 text-gray-600 text-sm leading-relaxed">
                         {item.points.map((p, j) =>
                           typeof p === "string" ? (
                             <li key={j}>{p}</li>
                           ) : (
                             <li key={j}>
-                              <span className="font-semibold text-cyan-300">{p.label}</span> {p.text}
+                              <span className="font-semibold text-blue-300">{p.label}</span> {p.text}
                             </li>
                           )
                         )}
@@ -293,14 +293,14 @@ export default function BiometricAccessControlPage() {
                       <CheckIcon className={`h-6 w-6 ${item.color}`} />
                     </span>
                     <div className="space-y-2">
-                      <h3 className="font-bold text-slate-100">{item.title}</h3>
-                      <ul className="space-y-2 text-slate-300 text-sm leading-relaxed">
+                      <h3 className="font-bold text-gray-900">{item.title}</h3>
+                      <ul className="space-y-2 text-gray-600 text-sm leading-relaxed">
                         {item.points.map((p, j) =>
                           typeof p === "string" ? (
                             <li key={j}>{p}</li>
                           ) : (
                             <li key={j}>
-                              <span className="font-semibold text-cyan-300">{p.label}</span> {p.text}
+                              <span className="font-semibold text-blue-300">{p.label}</span> {p.text}
                             </li>
                           )
                         )}
@@ -314,10 +314,10 @@ export default function BiometricAccessControlPage() {
         </section>
 
         {/* Introduction – full paragraph */}
-        <section className="py-12 lg:py-16 bg-slate-900 border-t border-slate-700/80">
+        <section className="py-12 lg:py-16 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-4xl px-6 lg:px-12 text-center">
             <motion.h2
-              className="text-2xl font-bold text-cyan-400 sm:text-3xl"
+              className="text-2xl font-bold text-blue-500 sm:text-3xl"
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -326,11 +326,11 @@ export default function BiometricAccessControlPage() {
               Biometric Access Control
             </motion.h2>
             <div
-              className="mx-auto mt-2 h-0.5 w-16 rounded-full bg-cyan-500"
+              className="mx-auto mt-2 h-0.5 w-16 rounded-full bg-blue-500"
               aria-hidden
             />
             <motion.p
-              className="mt-6 text-slate-300 leading-relaxed text-base sm:text-lg"
+              className="mt-6 text-gray-600 leading-relaxed text-base sm:text-lg"
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -342,7 +342,7 @@ export default function BiometricAccessControlPage() {
         </section>
 
         {/* Biometric device features – image with callout labels */}
-        <section className="py-16 lg:py-24 bg-slate-800/50 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-5xl px-6 lg:px-12">
             <motion.div
               className="relative mx-auto max-w-2xl"
@@ -351,7 +351,7 @@ export default function BiometricAccessControlPage() {
               viewport={viewport}
               transition={{ duration: 0.6, ease: smoothEase }}
             >
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-slate-600/80 bg-slate-800">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-gray-200 bg-gray-100">
                 <Image
                   src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=85"
                   alt="Biometric device with face recognition and fingerprint"
@@ -364,12 +364,12 @@ export default function BiometricAccessControlPage() {
                 {deviceCallouts.map((label) => (
                   <div
                     key={label}
-                    className="flex items-center gap-2 text-sm font-medium text-cyan-400"
+                    className="flex items-center gap-2 text-sm font-medium text-blue-500"
                   >
-                    <svg className="h-5 w-5 flex-shrink-0 text-cyan-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <svg className="h-5 w-5 flex-shrink-0 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
-                    <span className="bg-slate-800 px-3 py-2 rounded-lg border border-slate-600/80 text-slate-200">{label}</span>
+                    <span className="bg-gray-100 px-3 py-2 rounded-lg border border-gray-200 border border-gray-200 text-gray-700">{label}</span>
                   </div>
                 ))}
               </div>
@@ -378,10 +378,10 @@ export default function BiometricAccessControlPage() {
         </section>
 
         {/* Powerful Services for Your Business */}
-        <section className="py-16 lg:py-24 bg-slate-900 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <motion.h2
-              className="text-center text-2xl font-bold text-cyan-400 sm:text-3xl"
+              className="text-center text-2xl font-bold text-blue-500 sm:text-3xl"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -389,18 +389,18 @@ export default function BiometricAccessControlPage() {
             >
               Powerful Services for Your Business
             </motion.h2>
-            <div className="mx-auto mt-2 h-0.5 w-20 rounded-full bg-cyan-500" />
+            <div className="mx-auto mt-2 h-0.5 w-20 rounded-full bg-blue-500" />
             <div className="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {powerfulServices.map((service, i) => (
                 <motion.div
                   key={service.title}
-                  className="flex items-start gap-4 rounded-xl border border-slate-600/80 bg-slate-800/80 p-6 backdrop-blur-sm"
+                  className="flex items-start gap-4 rounded-xl border border-gray-200 bg-white p-6 backdrop-blur-sm"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={viewport}
                   transition={{ duration: 0.5, ease: smoothEase, delay: i * 0.05 }}
                 >
-                  <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-cyan-500/20 text-cyan-400">
+                  <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-blue-500/20 text-blue-500">
                     {service.icon === "document" && (
                       <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
                     )}
@@ -420,7 +420,7 @@ export default function BiometricAccessControlPage() {
                       <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
                     )}
                   </span>
-                  <h3 className="font-semibold text-slate-100">{service.title}</h3>
+                  <h3 className="font-semibold text-gray-900">{service.title}</h3>
                 </motion.div>
               ))}
             </div>
@@ -428,7 +428,7 @@ export default function BiometricAccessControlPage() {
         </section>
 
         {/* Empowering Workplaces & Mobile App */}
-        <section className="py-16 lg:py-24 bg-slate-800/50 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
               <motion.div
@@ -438,15 +438,15 @@ export default function BiometricAccessControlPage() {
                 viewport={viewport}
                 transition={{ duration: 0.6, ease: smoothEase }}
               >
-                <h2 className="text-2xl font-bold text-cyan-400 sm:text-3xl">
+                <h2 className="text-2xl font-bold text-blue-500 sm:text-3xl">
                   Empowering Smarter Workplaces Across all Industries.
                 </h2>
-                <p className="mt-6 text-slate-300 leading-relaxed text-base sm:text-lg">
+                <p className="mt-6 text-gray-600 leading-relaxed text-base sm:text-lg">
                   InOps Tech empowers smarter workplaces across diverse industries by providing innovative technology solutions tailored to optimize efficiency, collaboration, and productivity.
                 </p>
                 <Link
                   href="/contact"
-                  className="mt-8 inline-flex items-center rounded-xl bg-cyan-600 px-6 py-3 font-semibold text-white shadow-lg shadow-cyan-500/25 transition hover:bg-cyan-500"
+                  className="mt-8 inline-flex items-center rounded-xl bg-blue-500 px-6 py-3 font-semibold text-white shadow-lg transition hover:bg-blue-600"
                 >
                   Get Started
                 </Link>
@@ -459,30 +459,30 @@ export default function BiometricAccessControlPage() {
                 transition={{ duration: 0.6, ease: smoothEase, delay: 0.1 }}
               >
                 {/* Phone mockup with My Attendance app */}
-                <div className="relative w-[280px] rounded-[2.5rem] border-[10px] border-slate-800 bg-slate-800 p-2 shadow-2xl">
-                  <div className="absolute left-1/2 top-0 h-6 w-24 -translate-x-1/2 rounded-b-2xl bg-slate-800" aria-hidden />
-                  <div className="overflow-hidden rounded-[1.5rem] bg-slate-800 border border-slate-600/80">
-                    <div className="bg-slate-700/80 px-4 py-3 flex items-center justify-between border-b border-slate-600/80">
-                      <svg className="h-5 w-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
-                      <span className="font-semibold text-slate-100 text-sm">My Attendance</span>
-                      <svg className="h-5 w-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                <div className="relative w-[280px] rounded-[2.5rem] border-[10px] border-gray-200 bg-gray-100 p-2 shadow-2xl">
+                  <div className="absolute left-1/2 top-0 h-6 w-24 -translate-x-1/2 rounded-b-2xl bg-gray-100" aria-hidden />
+                  <div className="overflow-hidden rounded-[1.5rem] bg-gray-100 border border-gray-200">
+                    <div className="bg-gray-100/80 px-4 py-3 flex items-center justify-between border-b border-gray-200">
+                      <svg className="h-5 w-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+                      <span className="font-semibold text-gray-900 text-sm">My Attendance</span>
+                      <svg className="h-5 w-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                     </div>
-                    <div className="flex gap-1 p-2 border-b border-slate-600/80">
-                      <button type="button" className="flex-1 rounded-lg bg-cyan-500/20 py-2 text-xs font-medium text-cyan-300">PREV</button>
-                      <button type="button" className="flex-1 rounded-lg bg-slate-700 py-2 text-xs font-medium text-slate-400">NEXT</button>
+                    <div className="flex gap-1 p-2 border-b border-gray-200">
+                      <button type="button" className="flex-1 rounded-lg bg-blue-500/20 py-2 text-xs font-medium text-blue-300">PREV</button>
+                      <button type="button" className="flex-1 rounded-lg bg-gray-100 py-2 text-xs font-medium text-gray-500">NEXT</button>
                     </div>
-                    <div className="px-3 py-2 text-xs text-slate-400 font-medium">12-Jul-2018 - 18-Jul-2018</div>
+                    <div className="px-3 py-2 text-xs text-gray-500 font-medium">12-Jul-2018 - 18-Jul-2018</div>
                     <div className="px-3 pb-2 space-y-2">
                       {["10:00", "09:50", "08:50"].map((time, i) => (
                         <div key={time} className="flex items-center justify-between text-sm">
-                          <span className="text-slate-200">{time}</span>
-                          <span className={`text-xs font-medium ${i === 0 ? "text-emerald-400" : "text-slate-400"}`}>{i === 0 ? "Present" : "—"}</span>
+                          <span className="text-gray-700">{time}</span>
+                          <span className={`text-xs font-medium ${i === 0 ? "text-emerald-400" : "text-gray-500"}`}>{i === 0 ? "Present" : "—"}</span>
                         </div>
                       ))}
                     </div>
-                    <div className="p-3 border-t border-slate-600/80">
+                    <div className="p-3 border-t border-gray-200">
                       <button type="button" className="w-full rounded-lg bg-emerald-500 py-3 text-sm font-semibold text-white">CHECK IN</button>
-                      <p className="mt-2 text-center text-xs text-slate-400">Total Hours: 35.43</p>
+                      <p className="mt-2 text-center text-xs text-gray-500">Total Hours: 35.43</p>
                     </div>
                   </div>
                 </div>

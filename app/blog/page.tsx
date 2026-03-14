@@ -52,7 +52,7 @@ const posts = [
 export default function BlogPage() {
   return (
     <>
-      <div className="min-h-screen bg-[var(--background)]">
+      <div className="min-h-screen bg-white text-gray-900">
         {/* Hero */}
         <motion.section
           className="relative min-h-[280px] flex flex-col items-center justify-center overflow-hidden"
@@ -69,7 +69,7 @@ export default function BlogPage() {
               sizes="100vw"
               priority
             />
-            <div className="absolute inset-0 bg-slate-900/70" />
+            <div className="absolute inset-0 bg-gray-900/70" />
           </div>
           <div className="relative z-10 text-center px-6">
             <motion.h1
@@ -91,19 +91,19 @@ export default function BlogPage() {
                 Home
               </Link>
               <span className="mx-2 text-white/60">/</span>
-              <span className="text-cyan-300 font-medium">Blog</span>
+              <span className="text-blue-300 font-medium">Blog</span>
             </motion.nav>
           </div>
         </motion.section>
 
         {/* Blog posts grid */}
-        <section className="py-16 lg:py-24">
+        <section className="py-28 lg:py-40 bg-gray-50">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:gap-12">
               {posts.map((post, i) => (
                 <motion.article
                   key={post.slug}
-                  className="group flex flex-col rounded-2xl border border-slate-600/80 bg-slate-800 shadow-sm overflow-hidden transition-shadow hover:shadow-md"
+                  className="group flex flex-col rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden transition-shadow hover:shadow-md hover:border-blue-100"
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={viewport}
@@ -125,10 +125,10 @@ export default function BlogPage() {
                     </div>
                   </div>
                   <div className="flex flex-1 flex-col p-6 lg:p-8">
-                    <h2 className="text-xl font-bold leading-tight text-white sm:text-2xl">
+                    <h2 className="text-xl font-bold leading-tight text-gray-900 sm:text-2xl">
                       <span className="transition-colors">{post.title}</span>
                     </h2>
-                    <div className="mt-3 flex flex-wrap items-center gap-4 text-sm text-slate-400">
+                    <div className="mt-3 flex flex-wrap items-center gap-4 text-sm text-gray-500">
                       <span className="flex items-center gap-1.5">
                         <svg
                           className="h-4 w-4 text-slate-400"
@@ -162,12 +162,12 @@ export default function BlogPage() {
                         {post.date}
                       </span>
                     </div>
-                    <p className="mt-4 flex-1 text-slate-300 leading-relaxed line-clamp-3">
+                    <p className="mt-4 flex-1 text-gray-600 leading-relaxed line-clamp-3">
                       {post.snippet}
                     </p>
                     <Link
                       href="#"
-                      className="mt-5 inline-flex items-center text-sm font-medium text-cyan-600 transition-colors hover:text-cyan-700"
+                      className="mt-5 inline-flex items-center text-sm font-medium text-blue-600 transition-colors hover:text-blue-700"
                     >
                       Read More
                       <span className="ml-1" aria-hidden>

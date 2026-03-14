@@ -42,7 +42,7 @@ const contactInfo = [
 export default function ContactPage() {
   return (
     <>
-      <div className="min-h-screen bg-[var(--background)]">
+      <div className="min-h-screen bg-white text-gray-900">
         {/* Hero banner */}
         <motion.section
           className="relative min-h-[280px] flex flex-col items-center justify-center overflow-hidden"
@@ -59,7 +59,7 @@ export default function ContactPage() {
               sizes="100vw"
               priority
             />
-            <div className="absolute inset-0 bg-slate-900/70" />
+            <div className="absolute inset-0 bg-gray-900/70" />
           </div>
           <div className="relative z-10 text-center px-6">
             <motion.h1
@@ -81,19 +81,19 @@ export default function ContactPage() {
                 Home
               </Link>
               <span className="mx-2 text-white/60">/</span>
-              <span className="text-cyan-300 font-medium">Contact</span>
+              <span className="text-blue-300 font-medium">Contact</span>
             </motion.nav>
           </div>
         </motion.section>
 
         {/* Contact info + form + map */}
-        <section className="py-16 lg:py-24">
+        <section className="py-28 lg:py-40 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             {/* Two columns: contact info (left) + form (right) */}
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
               {/* Left: contact info with map pattern background */}
               <motion.div
-                className="relative rounded-2xl border border-slate-600/80 bg-slate-800 p-8 shadow-sm lg:p-10"
+                className="relative rounded-2xl border border-gray-200 bg-gray-50 p-8 shadow-sm lg:p-10"
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={viewport}
@@ -115,12 +115,12 @@ export default function ContactPage() {
                       viewport={viewport}
                       transition={{ duration: 0.5, ease: smoothEase, delay: 0.1 * i }}
                     >
-                      <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-teal-600 text-white">
+                      <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white">
                         {item.icon}
                       </div>
                       <div>
-                        <p className="text-sm font-semibold text-slate-100">{item.label}</p>
-                        <p className="mt-1 text-slate-300 leading-relaxed">{item.value}</p>
+                        <p className="text-sm font-semibold text-gray-900">{item.label}</p>
+                        <p className="mt-1 text-gray-600 leading-relaxed">{item.value}</p>
                       </div>
                     </motion.div>
                   ))}
@@ -129,14 +129,14 @@ export default function ContactPage() {
 
               {/* Right: contact form */}
               <motion.div
-                className="rounded-2xl border border-slate-600/80 bg-slate-800 p-8 shadow-sm lg:p-10"
+                className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm lg:p-10"
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={viewport}
                 transition={{ duration: 0.75, ease: smoothEase, delay: 0.1 }}
               >
                 <motion.h2
-                  className="text-xl font-bold text-white sm:text-2xl"
+                  className="text-xl font-bold text-gray-900 sm:text-2xl"
                   initial={{ opacity: 0, y: 16 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={viewport}
@@ -145,7 +145,7 @@ export default function ContactPage() {
                   Send us a message
                 </motion.h2>
                 <motion.p
-                  className="mt-2 text-slate-300"
+                  className="mt-2 text-gray-600"
                   initial={{ opacity: 0, y: 12 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={viewport}
@@ -159,7 +159,7 @@ export default function ContactPage() {
 
             {/* Embedded map */}
             <motion.div
-              className="mt-12 overflow-hidden rounded-2xl border border-slate-200/80 shadow-sm"
+              className="mt-12 overflow-hidden rounded-2xl border border-gray-200 shadow-sm"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}

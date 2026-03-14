@@ -48,16 +48,16 @@ const supportLinks = [
 export default function Footer() {
   return (
     <footer className="mt-auto">
-      <div className="bg-gradient-to-b from-slate-900 to-slate-950 px-6 py-12 lg:px-12 lg:py-16">
+      <div className="bg-gray-50 border-t border-gray-100 px-6 py-12 lg:px-12 lg:py-16">
         <div className="mx-auto flex max-w-7xl flex-col gap-12 md:flex-row md:items-start md:justify-between">
           <div>
             <Link href="/" className="flex items-center">
-              <Image src="/logo.png" alt="InOps solutions" width={160} height={48} className="h-10 w-auto object-contain" />
+              <Image src="/logo.png" alt="InOps solutions" width={160} height={48} className="h-10 w-auto object-contain opacity-90" />
             </Link>
-            <p className="mt-4 max-w-xs text-sm text-slate-400">Automated CLMS and compliance for your workforce.</p>
+            <p className="mt-4 max-w-xs text-sm text-gray-600">Automated CLMS and compliance for your workforce.</p>
             <div className="mt-6 flex gap-3">
               {socialLinks.map((s) => (
-                <a key={s.icon} href={s.href} className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-600 bg-slate-800/60 text-slate-300 transition hover:border-teal-500 hover:bg-teal-500/10 hover:text-teal-400" aria-label={s.label}>
+                <a key={s.icon} href={s.href} className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-500 shadow-sm transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-600" aria-label={s.label}>
                   <SocialIcon icon={s.icon} />
                 </a>
               ))}
@@ -65,13 +65,13 @@ export default function Footer() {
           </div>
           <div className="flex flex-col gap-10 sm:flex-row sm:gap-20">
             <div>
-              <h3 className="text-lg font-semibold text-white">Quick Links</h3>
-              <div className="mt-2 h-0.5 w-10 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500" />
+              <h3 className="text-lg font-semibold text-gray-900">Quick Links</h3>
+              <div className="mt-2 h-0.5 w-10 rounded-full bg-blue-500" />
               <ul className="mt-4 space-y-2.5">
                 {quickLinks.map((link) => (
                   <li key={link.label}>
-                    <Link href={link.href} className="flex items-center gap-2 text-slate-400 transition hover:text-teal-400">
-                      <span className="text-teal-500/80">→</span>
+                    <Link href={link.href} className="flex items-center gap-2 text-gray-600 transition hover:text-blue-600">
+                      <span className="text-blue-500/80">→</span>
                       {link.label}
                     </Link>
                   </li>
@@ -79,13 +79,13 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-white">Support</h3>
-              <div className="mt-2 h-0.5 w-10 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500" />
+              <h3 className="text-lg font-semibold text-gray-900">Support</h3>
+              <div className="mt-2 h-0.5 w-10 rounded-full bg-blue-500" />
               <ul className="mt-4 space-y-2.5">
                 {supportLinks.map((link) => (
                   <li key={link.label}>
-                    <Link href={link.href} className="flex items-center gap-2 text-slate-400 transition hover:text-teal-400">
-                      <span className="text-teal-500/80">→</span>
+                    <Link href={link.href} className="flex items-center gap-2 text-gray-600 transition hover:text-blue-600">
+                      <span className="text-blue-500/80">→</span>
                       {link.label}
                     </Link>
                   </li>
@@ -95,9 +95,9 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="border-t border-slate-800 bg-slate-950 px-6 py-5 text-center">
-        <p className="text-sm text-slate-400">
-          Copyright © 2025 <span className="text-teal-400 font-medium">Inopssolution.</span> All Rights Reserved.
+      <div className="border-t border-gray-200 bg-white px-6 py-5 text-center">
+        <p className="text-sm text-gray-500">
+          Copyright © 2025 <span className="text-blue-600 font-medium">Inopssolution.</span> All Rights Reserved.
         </p>
       </div>
     </footer>

@@ -75,7 +75,7 @@ const electroMagneticLocks = [
 export default function AccessoriesPage() {
   return (
     <>
-      <div className="min-h-screen bg-[var(--background)]">
+      <div className="min-h-screen bg-white text-gray-900">
         {/* Hero – dark background with overlay */}
         <motion.section
           className="relative min-h-[320px] flex flex-col items-center justify-center overflow-hidden"
@@ -92,7 +92,7 @@ export default function AccessoriesPage() {
               sizes="100vw"
               priority
             />
-            <div className="absolute inset-0 bg-slate-900/75" />
+            <div className="absolute inset-0 bg-gray-900/70" />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(6,182,212,0.15),transparent)]" />
           </div>
           <div className="relative z-10 text-center px-6">
@@ -115,16 +115,16 @@ export default function AccessoriesPage() {
                 Home
               </Link>
               <span className="mx-2 text-white/60">/</span>
-              <span className="text-cyan-300 font-medium">Accessories</span>
+              <span className="text-blue-600 font-medium">Accessories</span>
             </motion.nav>
           </div>
         </motion.section>
 
         {/* Main content – section title + two products */}
-        <section className="py-16 lg:py-24 bg-slate-900 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <motion.h2
-              className="text-2xl font-bold text-white sm:text-3xl"
+              className="text-2xl font-bold text-gray-900 sm:text-3xl"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -132,19 +132,19 @@ export default function AccessoriesPage() {
             >
               Accessories
             </motion.h2>
-            <div className="mt-2 h-0.5 w-16 rounded-full bg-cyan-500" aria-hidden />
+            <div className="mt-2 h-0.5 w-16 rounded-full bg-blue-500" aria-hidden />
             <div className="mt-14 grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16 lg:gap-20">
               {accessories.map((product, i) => (
                 <motion.article
                   key={product.name}
-                  className="flex flex-col rounded-xl border border-slate-600/80 bg-slate-800/80 p-6 backdrop-blur-sm"
+                  className="flex flex-col rounded-xl border border-gray-600/80 bg-white p-6 backdrop-blur-sm"
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={viewport}
                   transition={{ duration: 0.5, ease: smoothEase, delay: i * 0.1 }}
                 >
-                  <h3 className="text-xl font-bold text-slate-100 sm:text-2xl">{product.name}</h3>
-                  <div className="mt-4 relative aspect-square max-w-sm rounded-xl overflow-hidden border border-slate-600/80 bg-slate-700/50">
+                  <h3 className="text-xl font-bold text-gray-900 sm:text-2xl">{product.name}</h3>
+                  <div className="mt-4 relative aspect-square max-w-sm rounded-xl overflow-hidden border border-gray-600/80 bg-gray-100">
                     <Image
                       src={product.imageUrl}
                       alt={product.imageAlt}
@@ -153,8 +153,8 @@ export default function AccessoriesPage() {
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
-                  <p className="mt-3 text-sm font-medium text-slate-400">{product.model}</p>
-                  <div className="mt-3 space-y-2 text-slate-300 text-sm leading-relaxed italic">
+                  <p className="mt-3 text-sm font-medium text-gray-600">{product.model}</p>
+                  <div className="mt-3 space-y-2 text-gray-600 text-sm leading-relaxed italic">
                     {Array.isArray(product.description) ? (
                       product.description.map((para, j) => <p key={j}>{para}</p>)
                     ) : (
@@ -168,20 +168,20 @@ export default function AccessoriesPage() {
         </section>
 
         {/* FP Sensor & RF Cards */}
-        <section className="py-16 lg:py-24 bg-slate-800/50 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16 lg:gap-20">
               {fpSensorAndRfCards.map((product, i) => (
                 <motion.article
                   key={product.title}
-                  className="flex flex-col rounded-xl border border-slate-600/80 bg-slate-800/80 p-6 backdrop-blur-sm"
+                  className="flex flex-col rounded-xl border border-gray-600/80 bg-white p-6 backdrop-blur-sm"
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={viewport}
                   transition={{ duration: 0.5, ease: smoothEase, delay: i * 0.1 }}
                 >
-                  <h3 className="text-xl font-bold text-slate-100 sm:text-2xl">{product.title}</h3>
-                  <div className="mt-4 relative aspect-[4/3] w-full max-w-md mx-auto rounded-xl overflow-hidden border border-slate-600/80 bg-slate-700/50">
+                  <h3 className="text-xl font-bold text-gray-900 sm:text-2xl">{product.title}</h3>
+                  <div className="mt-4 relative aspect-[4/3] w-full max-w-md mx-auto rounded-xl overflow-hidden border border-gray-600/80 bg-gray-100">
                     <Image
                       src={product.imageUrl}
                       alt={product.imageAlt}
@@ -190,8 +190,8 @@ export default function AccessoriesPage() {
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
-                  <p className="mt-3 text-sm font-semibold text-cyan-300">{product.subtitle}</p>
-                  <p className="mt-3 text-slate-300 text-sm leading-relaxed">{product.description}</p>
+                  <p className="mt-3 text-sm font-semibold text-blue-600">{product.subtitle}</p>
+                  <p className="mt-3 text-gray-600 text-sm leading-relaxed">{product.description}</p>
                 </motion.article>
               ))}
             </div>
@@ -199,20 +199,20 @@ export default function AccessoriesPage() {
         </section>
 
         {/* Electro-Magnetic Locks – SL-600 & DL-600 */}
-        <section className="py-16 lg:py-24 bg-slate-900 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16 lg:gap-20">
               {electroMagneticLocks.map((product, i) => (
                 <motion.article
                   key={product.model}
-                  className="flex flex-col rounded-xl border border-slate-600/80 bg-slate-800/80 p-6 backdrop-blur-sm"
+                  className="flex flex-col rounded-xl border border-gray-600/80 bg-white p-6 backdrop-blur-sm"
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={viewport}
                   transition={{ duration: 0.5, ease: smoothEase, delay: i * 0.1 }}
                 >
-                  <p className="text-lg font-bold text-cyan-300">{product.model}</p>
-                  <div className="mt-4 relative aspect-[4/3] w-full max-w-md mx-auto rounded-xl overflow-hidden border border-slate-600/80 bg-slate-700/50">
+                  <p className="text-lg font-bold text-blue-600">{product.model}</p>
+                  <div className="mt-4 relative aspect-[4/3] w-full max-w-md mx-auto rounded-xl overflow-hidden border border-gray-600/80 bg-gray-100">
                     <Image
                       src={product.imageUrl}
                       alt={product.imageAlt}
@@ -221,8 +221,8 @@ export default function AccessoriesPage() {
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
-                  <h3 className="mt-4 text-center text-lg font-bold text-slate-100">{product.title}</h3>
-                  <ul className="mt-4 space-y-2 text-slate-300 text-sm leading-relaxed list-disc list-inside">
+                  <h3 className="mt-4 text-center text-lg font-bold text-gray-900">{product.title}</h3>
+                  <ul className="mt-4 space-y-2 text-gray-600 text-sm leading-relaxed list-disc list-inside">
                     {product.specs.map((spec, j) => (
                       <li key={j}>{spec}</li>
                     ))}

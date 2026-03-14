@@ -1,6 +1,12 @@
 "use client";
 
+import { useRef, useEffect } from "react";
 import Image from "next/image";
+
+const CARD_WIDTH = 260;
+const CARD_GAP = 16;
+const AUTO_SCROLL_INTERVAL_MS = 4000;
+const SCROLL_STEP = CARD_WIDTH + CARD_GAP;
 
 const modules = [
   {
@@ -55,52 +61,113 @@ function ModuleCard({
   imageUrl: string;
 }) {
   return (
-    <div className="module-card group w-[300px] flex-shrink-0 overflow-hidden rounded-2xl border border-slate-600/80 bg-slate-800 shadow-depth transition hover:-translate-y-1 hover:border-cyan-500/50 hover:shadow-depth-lg sm:w-[340px]">
-      <div className="relative aspect-[4/3] overflow-hidden rounded-t-2xl bg-slate-200">
-        <Image
-          src={imageUrl}
-          alt=""
-          fill
-          className="object-cover transition duration-300 group-hover:scale-105"
-          sizes="340px"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
-      </div>
-      <div className="border-t border-slate-100 p-6">
-        <h3 className="text-lg font-bold text-slate-100">{title}</h3>
-        <p className="mt-2 text-sm leading-relaxed text-slate-400">{description}</p>
+    <div className="group relative h-[280px] w-[260px] flex-shrink-0 overflow-hidden rounded-xl border border-gray-200 bg-gray-100 shadow-md transition-all duration-300 hover:shadow-lg hover:border-blue-200">
+      <Image
+        src={imageUrl}
+        alt={title}
+        fill
+        className="object-cover transition duration-500 group-hover:scale-105"
+        sizes="260px"
+      />
+      {/* Hover overlay: title + description */}
+      <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/85 via-black/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+        <div className="p-4 text-white">
+          <h3 className="text-base font-heading leading-tight">{title}</h3>
+          <p className="mt-1.5 line-clamp-3 text-xs leading-relaxed text-white/90">{description}</p>
+        </div>
       </div>
     </div>
   );
 }
 
 export default function ModulesSlider() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (dir: "left" | "right") => {
+    if (!scrollRef.current) return;
+    scrollRef.current.scrollBy({ left: dir === "left" ? -SCROLL_STEP : SCROLL_STEP, behavior: "smooth" });
+  };
+
+  // Auto-slide every few seconds; loop back when near end
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const id = setInterval(() => {
+      const { scrollLeft, scrollWidth, clientWidth } = el;
+      const maxScroll = scrollWidth - clientWidth;
+      if (maxScroll <= 0) return;
+      if (scrollLeft >= maxScroll - 10) {
+        el.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        el.scrollBy({ left: SCROLL_STEP, behavior: "smooth" });
+      }
+    }, AUTO_SCROLL_INTERVAL_MS);
+    return () => clearInterval(id);
+  }, []);
+
   return (
-    <section id="solutions" className="relative py-20 lg:py-28">
-      <div className="absolute inset-0 bg-white bg-grid-pattern opacity-20" />
+    <section id="solutions" className="relative py-28 lg:py-40 bg-gray-50">
       <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
-        <div className="text-center">
-          <span className="section-badge">Solutions</span>
-          <h2 className="mt-4 text-center text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Our Modules
-          </h2>
-          <p className="mx-auto mt-3 max-w-xl text-slate-300">
-            End-to-end tools for time, compliance, and workforce management
-          </p>
-        </div>
-        <div className="hover-pause relative mt-12 overflow-hidden">
-          <div
-            className="flex w-max gap-6 animate-marquee-slow md:gap-8"
-            style={{ willChange: "transform" }}
-          >
-            {[...modules, ...modules].map((mod, i) => (
-              <ModuleCard
-                key={`${mod.title}-${i}`}
-                title={mod.title}
-                description={mod.description}
-                imageUrl={mod.imageUrl}
-              />
-            ))}
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-stretch lg:gap-12">
+          {/* Left: text block */}
+          <div className="flex flex-shrink-0 flex-col justify-center lg:w-[28%] xl:w-[26%]">
+            <span className="section-badge">Solutions</span>
+            <h2 className="mt-4 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+              Our Modules
+            </h2>
+            <p className="mt-3 max-w-sm text-gray-600">
+              End-to-end tools for time, compliance, and workforce management
+            </p>
+            <div className="mt-4 h-0.5 w-12 rounded-full bg-blue-500" />
+            <a
+              href="#solutions"
+              className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-gray-600 transition hover:text-blue-600"
+            >
+              View all modules
+              <span className="inline-block h-px flex-1 max-w-[80px] bg-gray-300" aria-hidden />
+            </a>
+          </div>
+
+          {/* Right: slider with reduced width */}
+          <div className="relative flex-1 min-w-0 lg:max-w-[72%] xl:max-w-[70%]">
+            <div className="relative flex items-center gap-2">
+              <button
+                type="button"
+                onClick={() => scroll("left")}
+                className="absolute left-0 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-700 shadow-md transition hover:bg-gray-50 hover:border-blue-200 hover:text-blue-600"
+                aria-label="Previous"
+              >
+                <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+
+              <div
+                ref={scrollRef}
+                className="flex gap-4 overflow-x-auto scroll-smooth py-2 px-12 scrollbar-hide"
+                style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+              >
+                {modules.map((mod, i) => (
+                  <ModuleCard
+                    key={`${mod.title}-${i}`}
+                    title={mod.title}
+                    description={mod.description}
+                    imageUrl={mod.imageUrl}
+                  />
+                ))}
+              </div>
+
+              <button
+                type="button"
+                onClick={() => scroll("right")}
+                className="absolute right-0 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-700 shadow-md transition hover:bg-gray-50 hover:border-blue-200 hover:text-blue-600"
+                aria-label="Next"
+              >
+                <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>

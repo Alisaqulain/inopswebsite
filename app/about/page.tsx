@@ -83,7 +83,7 @@ export default function AboutPage() {
 
   return (
     <>
-      <div className="min-h-screen bg-[var(--background)]">
+      <div className="min-h-screen bg-white text-gray-900">
         {/* Hero banner with background image */}
         <motion.section
           className="relative min-h-[280px] flex flex-col items-center justify-center overflow-hidden"
@@ -100,7 +100,7 @@ export default function AboutPage() {
               sizes="100vw"
               priority
             />
-            <div className="absolute inset-0 bg-slate-900/75" />
+            <div className="absolute inset-0 bg-gray-900/70" />
           </div>
           <div
             className="absolute inset-0 opacity-15"
@@ -129,13 +129,13 @@ export default function AboutPage() {
                 Home
               </Link>
               <span className="mx-2 text-white/60">/</span>
-              <span className="text-cyan-300 font-medium">About</span>
+              <span className="text-blue-300 font-medium">About</span>
             </motion.nav>
           </div>
         </motion.section>
 
         {/* About InOps: intro + 4 images + differentiators */}
-        <section className="py-16 lg:py-24">
+        <section className="py-28 lg:py-40 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
               {/* Left: featured image + 4 images grid */}
@@ -148,7 +148,7 @@ export default function AboutPage() {
               >
                 {/* Large featured image - left side */}
                 <motion.div
-                  className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-xl border border-slate-600/80"
+                  className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-xl border border-gray-200"
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={viewport}
@@ -194,7 +194,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.75, ease: smoothEase, delay: 0.1 }}
               >
                 <motion.h2
-                  className="text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl"
+                  className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl lg:text-4xl"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={viewport}
@@ -203,7 +203,7 @@ export default function AboutPage() {
                   About InOps: Empowering Business Digitalization
                 </motion.h2>
                 <motion.p
-                  className="mt-6 text-slate-300 leading-relaxed text-base sm:text-lg"
+                  className="mt-6 text-gray-600 leading-relaxed text-base sm:text-lg"
                   initial={{ opacity: 0, y: 16 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={viewport}
@@ -223,12 +223,12 @@ export default function AboutPage() {
                       viewport={viewport}
                       transition={{ duration: 0.5, ease: smoothEase, delay: 0.1 * i }}
                     >
-                      <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-cyan-500/15 text-cyan-600 text-sm font-bold">
+                      <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600 text-sm font-bold">
                         ✓
                       </span>
                       <div>
-                        <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-                        <p className="mt-1 text-slate-300 text-sm sm:text-base leading-relaxed">{item.text}</p>
+                        <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
+                        <p className="mt-1 text-gray-600 text-sm sm:text-base leading-relaxed">{item.text}</p>
                       </div>
                     </motion.div>
                   ))}
@@ -239,10 +239,10 @@ export default function AboutPage() {
         </section>
 
         {/* Our workspace / culture - image strip */}
-        <section className="py-16 lg:py-20 bg-[var(--background)]">
+        <section className="py-28 lg:py-40 bg-gray-50">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <motion.h2
-              className="text-center text-2xl font-bold text-white sm:text-3xl"
+              className="text-center text-2xl font-bold text-gray-900 sm:text-3xl"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -251,7 +251,7 @@ export default function AboutPage() {
               Our workspace & culture
             </motion.h2>
             <motion.p
-              className="mt-3 text-center text-slate-300 max-w-2xl mx-auto"
+              className="mt-3 text-center text-gray-600 max-w-2xl mx-auto"
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -263,7 +263,7 @@ export default function AboutPage() {
               {aboutSectionImages.map((img, i) => (
                 <motion.div
                   key={img.alt}
-                  className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-slate-600/80"
+                  className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-gray-200"
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={viewport}
@@ -283,10 +283,10 @@ export default function AboutPage() {
         </section>
 
         {/* Why Choose Us: tech tree visual + Expertise card */}
-        <section className="border-t border-slate-700 bg-slate-800/50 py-16 lg:py-24">
+        <section className="border-t border-gray-200 bg-white py-28 lg:py-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <motion.h2
-              className="text-center text-2xl font-bold text-white sm:text-3xl"
+              className="text-center text-2xl font-bold text-gray-900 sm:text-3xl"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -295,7 +295,7 @@ export default function AboutPage() {
               Why Choose Us
             </motion.h2>
             <motion.div
-              className="mt-2 mx-auto h-1 w-16 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500"
+              className="mt-2 mx-auto h-1 w-16 rounded-full bg-gradient-to-r from-blue-500 to-blue-600"
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               viewport={viewport}
@@ -314,7 +314,7 @@ export default function AboutPage() {
                 {techIcons.map((icon, i) => (
                   <motion.div
                     key={icon.name}
-                    className="flex h-14 w-14 items-center justify-center rounded-xl border border-slate-600 bg-slate-800 text-slate-300 shadow-sm transition hover:border-cyan-200 hover:bg-cyan-50/50 hover:text-cyan-700"
+                    className="flex h-14 w-14 items-center justify-center rounded-xl border border-gray-200 bg-white text-gray-600 shadow-sm transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={viewport}
@@ -330,14 +330,14 @@ export default function AboutPage() {
 
               {/* Right: Expertise card with slider */}
               <motion.div
-                className="rounded-2xl border border-slate-600 bg-slate-800 p-8 shadow-sm lg:p-10"
+                className="rounded-2xl border border-gray-200 bg-gray-50 p-8 shadow-sm lg:p-10"
                 initial={{ opacity: 0, x: 40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={viewport}
                 transition={{ duration: 0.7, ease: smoothEase }}
               >
-                <h3 className="text-xl font-bold text-white">Expertise</h3>
-                <p className="mt-2 text-slate-300 text-sm leading-relaxed">
+                <h3 className="text-xl font-bold text-gray-900">Expertise</h3>
+                <p className="mt-2 text-gray-600 text-sm leading-relaxed">
                   Our team brings diverse expertise across technology, compliance, and operations to deliver solutions that work for you.
                 </p>
                 <div className="mt-6 min-h-[120px]">
@@ -349,8 +349,8 @@ export default function AboutPage() {
                       exit={{ opacity: 0, x: -12 }}
                       transition={{ duration: 0.3, ease: smoothEase }}
                     >
-                      <h4 className="font-semibold text-white">{expertiseSlides[expertiseIndex].title}</h4>
-                      <p className="mt-2 text-slate-300 text-sm leading-relaxed">{expertiseSlides[expertiseIndex].text}</p>
+                      <h4 className="font-semibold text-gray-900">{expertiseSlides[expertiseIndex].title}</h4>
+                      <p className="mt-2 text-gray-600 text-sm leading-relaxed">{expertiseSlides[expertiseIndex].text}</p>
                     </motion.div>
                   </AnimatePresence>
                 </div>
@@ -361,7 +361,7 @@ export default function AboutPage() {
                         key={i}
                         onClick={() => setExpertiseIndex(i)}
                         className={`h-2 w-2 rounded-full transition-colors ${
-                          i === expertiseIndex ? "bg-cyan-600" : "bg-slate-300 hover:bg-slate-400"
+                          i === expertiseIndex ? "bg-blue-600" : "bg-gray-300 hover:bg-gray-400"
                         }`}
                         aria-label={`Go to slide ${i + 1}`}
                       />
@@ -370,7 +370,7 @@ export default function AboutPage() {
                   <div className="flex gap-2">
                     <button
                       onClick={() => setExpertiseIndex((prev) => (prev === 0 ? expertiseSlides.length - 1 : prev - 1))}
-                      className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-600 text-slate-300 transition hover:bg-slate-700 hover:border-slate-300"
+                      className="flex h-9 w-9 items-center justify-center rounded-lg border border-gray-200 text-gray-600 transition hover:bg-gray-100 hover:border-gray-300"
                       aria-label="Previous"
                     >
                       <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -379,7 +379,7 @@ export default function AboutPage() {
                     </button>
                     <button
                       onClick={() => setExpertiseIndex((prev) => (prev === expertiseSlides.length - 1 ? 0 : prev + 1))}
-                      className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-600 text-slate-300 transition hover:bg-slate-700 hover:border-slate-300"
+                      className="flex h-9 w-9 items-center justify-center rounded-lg border border-gray-200 text-gray-600 transition hover:bg-gray-100 hover:border-gray-300"
                       aria-label="Next"
                     >
                       <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -138,7 +138,7 @@ const toknEntries = [
 export default function LabourManagementPage() {
   return (
     <>
-      <div className="min-h-screen bg-[var(--background)]">
+      <div className="min-h-screen bg-white text-gray-900">
         {/* Hero – dark with industrial-style backdrop */}
         <motion.section
           className="relative min-h-[320px] flex flex-col items-center justify-center overflow-hidden"
@@ -146,7 +146,7 @@ export default function LabourManagementPage() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="absolute inset-0 bg-slate-800" />
+          <div className="absolute inset-0 bg-gray-900" />
           <div className="absolute inset-0 opacity-25">
             <Image
               src="https://images.unsplash.com/photo-1504309092620-4d0ec726efa4?w=1600&q=60"
@@ -157,8 +157,8 @@ export default function LabourManagementPage() {
               priority
             />
           </div>
-          <div className="absolute inset-0 bg-slate-900/85" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(6,182,212,0.12),transparent)]" />
+          <div className="absolute inset-0 bg-gray-900/70" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(6,182,212,0.15),transparent)]" />
           <div className="relative z-10 text-center px-6">
             <motion.h1
               className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl"
@@ -169,26 +169,26 @@ export default function LabourManagementPage() {
               Labour Management Software
             </motion.h1>
             <motion.nav
-              className="mt-4 text-sm text-white/90"
+              className="mt-4 text-sm text-white"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: smoothEase, delay: 0.25 }}
               aria-label="Breadcrumb"
             >
-              <Link href="/" className="hover:text-white transition-colors">
+              <Link href="/" className="text-white hover:text-white/90 transition-colors">
                 Home
               </Link>
-              <span className="mx-2 text-white/60">/</span>
-              <span className="text-cyan-300 font-medium">Labour Management Software</span>
+              <span className="mx-2 text-white/80">/</span>
+              <span className="text-blue-400 font-medium">Labour Management Software</span>
             </motion.nav>
           </div>
         </motion.section>
 
         {/* Intro – title, underline, paragraph */}
-        <section className="py-12 lg:py-16 bg-slate-900 border-t border-slate-700/80">
+        <section className="py-12 lg:py-16 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-4xl px-6 lg:px-12 text-center">
             <motion.h2
-              className="text-2xl font-bold text-white sm:text-3xl"
+              className="text-2xl font-bold text-gray-900 sm:text-3xl"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -196,9 +196,9 @@ export default function LabourManagementPage() {
             >
               Labour Management Software
             </motion.h2>
-            <div className="mx-auto mt-2 h-0.5 w-24 rounded-full bg-cyan-500" aria-hidden />
+            <div className="mx-auto mt-2 h-0.5 w-24 rounded-full bg-blue-500" aria-hidden />
             <motion.p
-              className="mt-6 text-slate-300 leading-relaxed text-base sm:text-lg"
+              className="mt-6 text-gray-600 leading-relaxed text-base sm:text-lg"
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -210,7 +210,7 @@ export default function LabourManagementPage() {
         </section>
 
         {/* Main content – arrow insight boxes left, intro text right */}
-        <section className="py-16 lg:py-24 bg-slate-900 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
               {/* Left – vertical stack of arrow-shaped insight boxes */}
@@ -251,13 +251,13 @@ export default function LabourManagementPage() {
                 viewport={viewport}
                 transition={{ duration: 0.6, ease: smoothEase, delay: 0.1 }}
               >
-                <h2 className="text-2xl font-bold text-white sm:text-3xl lg:text-4xl">
+                <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl lg:text-4xl">
                   Labour Management Software
                 </h2>
-                <p className="mt-6 text-slate-300 leading-relaxed text-base sm:text-lg">
+                <p className="mt-6 text-gray-600 leading-relaxed text-base sm:text-lg">
                   Welcome to InOps Company&apos;s Labour Management Software, a comprehensive solution designed to streamline workforce management and optimize productivity.
                 </p>
-                <p className="mt-4 text-slate-300 leading-relaxed text-base sm:text-lg">
+                <p className="mt-4 text-gray-600 leading-relaxed text-base sm:text-lg">
                   Our software offers a range of features tailored to meet the dynamic needs of businesses, empowering organizations to efficiently manage their workforce while maximizing operational efficiency. Explore the eight key features and their corresponding benefits:
                 </p>
               </motion.div>
@@ -266,10 +266,10 @@ export default function LabourManagementPage() {
         </section>
 
         {/* Features & Benefits */}
-        <section className="py-16 lg:py-24 bg-slate-800/50 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <motion.h2
-              className="text-center text-2xl font-bold text-white sm:text-3xl"
+              className="text-center text-2xl font-bold text-gray-900 sm:text-3xl"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -277,7 +277,7 @@ export default function LabourManagementPage() {
             >
               Features & Benefits
             </motion.h2>
-            <div className="mx-auto mt-2 h-0.5 w-20 rounded-full bg-cyan-500" aria-hidden />
+            <div className="mx-auto mt-2 h-0.5 w-20 rounded-full bg-blue-500" aria-hidden />
             <div className="mt-14 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-x-16 lg:gap-y-12">
               {featuresAndBenefits.map((item, i) => (
                 <motion.div
@@ -292,9 +292,9 @@ export default function LabourManagementPage() {
                     <CheckIcon className="h-5 w-5 text-white" />
                   </span>
                   <div className="space-y-2">
-                    <h3 className="font-bold text-slate-100">{item.title}</h3>
-                    <p className="text-slate-300 text-sm leading-relaxed">{item.description}</p>
-                    <p className="font-semibold text-cyan-300 text-sm">{item.benefit}</p>
+                    <h3 className="font-bold text-gray-900">{item.title}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+                    <p className="font-semibold text-blue-300 text-sm">{item.benefit}</p>
                   </div>
                 </motion.div>
               ))}
@@ -303,7 +303,7 @@ export default function LabourManagementPage() {
         </section>
 
         {/* Application screenshots – Timesheet+ Manager (desktop) + TOKN User (mobile) */}
-        <section className="py-16 lg:py-24 bg-slate-900 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-6xl px-6 lg:px-12">
             <motion.div
               className="relative flex flex-col items-center gap-8 lg:flex-row lg:justify-center lg:items-start"
@@ -313,32 +313,32 @@ export default function LabourManagementPage() {
               transition={{ duration: 0.6, ease: smoothEase }}
             >
               {/* Desktop – Timesheet+ Manager */}
-              <div className="w-full max-w-2xl rounded-xl border border-slate-600/80 bg-slate-800 shadow-2xl overflow-hidden">
-                <div className="flex items-center gap-2 border-b border-slate-600/80 bg-slate-700/80 px-4 py-2">
+              <div className="w-full max-w-2xl rounded-xl border border-gray-200 bg-gray-100 shadow-2xl overflow-hidden">
+                <div className="flex items-center gap-2 border-b border-gray-200 bg-gray-200/80 px-4 py-2">
                   <div className="flex gap-1.5">
                     <span className="h-2.5 w-2.5 rounded-full bg-rose-500" />
                     <span className="h-2.5 w-2.5 rounded-full bg-amber-500" />
                     <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />
                   </div>
-                  <span className="text-slate-400 text-xs ml-2">MY TOKN · MADER GROUP · DEVELOPMENT · TIMESHEET+ MAN</span>
+                  <span className="text-gray-500 text-xs ml-2">MY TOKN · MADER GROUP · DEVELOPMENT · TIMESHEET+ MAN</span>
                 </div>
                 <div className="p-4">
-                  <h3 className="text-slate-200 font-semibold text-lg mb-3">Submitted Timesheets</h3>
-                  <div className="overflow-x-auto rounded border border-slate-600">
+                  <h3 className="text-gray-700 font-semibold text-lg mb-3">Submitted Timesheets</h3>
+                  <div className="overflow-x-auto rounded border border-gray-200">
                     <table className="w-full min-w-[500px] text-xs">
                       <thead>
-                        <tr className="border-b border-slate-600 bg-slate-700/80">
-                          <th className="px-3 py-2 text-left font-medium text-slate-300">Job No.</th>
-                          <th className="px-3 py-2 text-left font-medium text-slate-300">Date</th>
-                          <th className="px-3 py-2 text-left font-medium text-slate-300">Hours</th>
-                          <th className="px-3 py-2 text-left font-medium text-slate-300">Start Time</th>
-                          <th className="px-3 py-2 text-left font-medium text-slate-300">Finish Time</th>
-                          <th className="px-3 py-2 text-left font-medium text-slate-300">Select</th>
+                        <tr className="border-b border-gray-200 bg-gray-200/80">
+                          <th className="px-3 py-2 text-left font-medium text-gray-600">Job No.</th>
+                          <th className="px-3 py-2 text-left font-medium text-gray-600">Date</th>
+                          <th className="px-3 py-2 text-left font-medium text-gray-600">Hours</th>
+                          <th className="px-3 py-2 text-left font-medium text-gray-600">Start Time</th>
+                          <th className="px-3 py-2 text-left font-medium text-gray-600">Finish Time</th>
+                          <th className="px-3 py-2 text-left font-medium text-gray-600">Select</th>
                         </tr>
                       </thead>
-                      <tbody className="text-slate-400">
+                      <tbody className="text-gray-500">
                         {timesheetRows.map((row, i) => (
-                          <tr key={i} className="border-b border-slate-600/80">
+                          <tr key={i} className="border-b border-gray-200">
                             <td className="px-3 py-2">{row.job}</td>
                             <td className="px-3 py-2">{row.date}</td>
                             <td className="px-3 py-2">{row.hours}</td>
@@ -354,29 +354,29 @@ export default function LabourManagementPage() {
               </div>
               {/* Mobile – TOKN User (overlapping) */}
               <div className="relative w-[280px] flex-shrink-0 lg:-ml-8 lg:mt-12">
-                <div className="rounded-[2rem] border-[10px] border-slate-800 bg-slate-800 p-2 shadow-2xl">
-                  <div className="absolute left-1/2 top-0 h-5 w-28 -translate-x-1/2 rounded-b-xl bg-slate-800" aria-hidden />
-                  <div className="overflow-hidden rounded-[1.25rem] bg-slate-800 border border-slate-600/80">
-                    <div className="bg-cyan-600/90 px-4 py-3 border-b border-slate-600/80">
+                <div className="rounded-[2rem] border-[10px] border-gray-200 bg-gray-100 p-2 shadow-2xl">
+                  <div className="absolute left-1/2 top-0 h-5 w-28 -translate-x-1/2 rounded-b-xl bg-gray-100" aria-hidden />
+                  <div className="overflow-hidden rounded-[1.25rem] bg-gray-100 border border-gray-200">
+                    <div className="bg-blue-500/90 px-4 py-3 border-b border-gray-200">
                       <span className="font-semibold text-white text-sm">TOKN User</span>
                     </div>
-                    <div className="px-3 py-2 text-xs text-cyan-300 font-medium text-center">W/E Date - 28/11/2019</div>
+                    <div className="px-3 py-2 text-xs text-blue-300 font-medium text-center">W/E Date - 28/11/2019</div>
                     <div className="px-2 pb-2 space-y-1 max-h-[240px] overflow-y-auto">
                       {toknEntries.map((row, i) => (
-                        <div key={i} className="rounded-lg bg-slate-700/80 p-2 text-xs">
-                          <div className="text-slate-400">Weekly Date: {row.weeklyDate} · Daily: {row.dailyDate}</div>
-                          <div className="mt-1 flex justify-between text-slate-200">
+                        <div key={i} className="rounded-lg bg-gray-200/80 p-2 text-xs">
+                          <div className="text-gray-500">Weekly Date: {row.weeklyDate} · Daily: {row.dailyDate}</div>
+                          <div className="mt-1 flex justify-between text-gray-700">
                             <span>Job {row.job}</span>
                             <span>Hours {row.hours}</span>
                           </div>
-                          <div className="text-slate-400">Start {row.start} · Finish {row.finish}</div>
-                          <div className="mt-1 text-cyan-400 flex items-center gap-1">Sent <span aria-hidden>ℹ</span></div>
+                          <div className="text-gray-500">Start {row.start} · Finish {row.finish}</div>
+                          <div className="mt-1 text-blue-400 flex items-center gap-1">Sent <span aria-hidden>ℹ</span></div>
                         </div>
                       ))}
                     </div>
-                    <div className="p-2 border-t border-slate-600/80 flex gap-2">
-                      <button type="button" className="flex-1 rounded-lg bg-cyan-600 py-2 text-xs font-medium text-white">New Daily</button>
-                      <button type="button" className="flex-1 rounded-lg bg-cyan-600 py-2 text-xs font-medium text-white">New Weekly</button>
+                    <div className="p-2 border-t border-gray-200 flex gap-2">
+                      <button type="button" className="flex-1 rounded-lg bg-blue-500 py-2 text-xs font-medium text-white">New Daily</button>
+                      <button type="button" className="flex-1 rounded-lg bg-blue-500 py-2 text-xs font-medium text-white">New Weekly</button>
                     </div>
                   </div>
                 </div>
@@ -386,10 +386,10 @@ export default function LabourManagementPage() {
         </section>
 
         {/* Powerful Services for Your Business */}
-        <section className="py-16 lg:py-24 bg-slate-800/50 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <motion.h2
-              className="text-2xl font-bold text-white sm:text-3xl"
+              className="text-2xl font-bold text-gray-900 sm:text-3xl"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -397,12 +397,12 @@ export default function LabourManagementPage() {
             >
               Powerful Services for Your Business
             </motion.h2>
-            <div className="mt-2 h-0.5 w-20 rounded-full bg-cyan-500" />
+            <div className="mt-2 h-0.5 w-20 rounded-full bg-blue-500" />
             <div className="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {powerfulServices.map((service, i) => (
                 <motion.div
                   key={service.title}
-                  className="flex items-start gap-4 rounded-xl border border-slate-600/80 bg-slate-800/80 p-6 backdrop-blur-sm"
+                  className="flex items-start gap-4 rounded-xl border border-gray-200 bg-gray-100/80 p-6 backdrop-blur-sm"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={viewport}
@@ -411,7 +411,7 @@ export default function LabourManagementPage() {
                   <span className={`flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg ${service.color} text-white`}>
                     <ServiceIcon icon={service.icon} />
                   </span>
-                  <h3 className="font-semibold text-slate-100">{service.title}</h3>
+                  <h3 className="font-semibold text-gray-900">{service.title}</h3>
                 </motion.div>
               ))}
             </div>
@@ -419,7 +419,7 @@ export default function LabourManagementPage() {
         </section>
 
         {/* Empowering Smarter Workplaces + phone mockup */}
-        <section className="py-16 lg:py-24 bg-slate-900 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
               <motion.div
@@ -429,15 +429,15 @@ export default function LabourManagementPage() {
                 viewport={viewport}
                 transition={{ duration: 0.6, ease: smoothEase }}
               >
-                <h2 className="text-2xl font-bold text-cyan-400 sm:text-3xl">
+                <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">
                   Empowering Smarter Workplaces Across all Industries
                 </h2>
-                <p className="mt-6 text-slate-300 leading-relaxed text-base sm:text-lg">
+                <p className="mt-6 text-gray-600 leading-relaxed text-base sm:text-lg">
                   InOps Tech empowers smarter workplaces across diverse industries by providing innovative technology solutions tailored to optimize efficiency, collaboration, and productivity.
                 </p>
                 <Link
                   href="/contact"
-                  className="mt-8 inline-flex items-center rounded-xl bg-cyan-600 px-6 py-3 font-semibold text-white shadow-lg shadow-cyan-500/25 transition hover:bg-cyan-500"
+                  className="mt-8 inline-flex items-center rounded-xl bg-blue-500 px-6 py-3 font-semibold text-white shadow-lg transition hover:bg-blue-600"
                 >
                   Get Started
                 </Link>
@@ -449,20 +449,20 @@ export default function LabourManagementPage() {
                 viewport={viewport}
                 transition={{ duration: 0.6, ease: smoothEase, delay: 0.1 }}
               >
-                <div className="relative w-[280px] rounded-[2.5rem] border-[10px] border-slate-800 bg-slate-800 p-2 shadow-2xl">
-                  <div className="absolute left-1/2 top-0 h-6 w-24 -translate-x-1/2 rounded-b-2xl bg-slate-800" aria-hidden />
-                  <div className="overflow-hidden rounded-[1.5rem] bg-slate-800 border border-slate-600/80">
-                    <div className="bg-slate-700/80 px-4 py-3 border-b border-slate-600/80 flex gap-2">
-                      <span className="font-semibold text-slate-100 text-sm">My Attendance</span>
-                      <span className="text-xs text-slate-400 ml-auto">Today</span>
-                      <span className="text-xs text-slate-400">Month</span>
+                <div className="relative w-[280px] rounded-[2.5rem] border-[10px] border-gray-200 bg-gray-100 p-2 shadow-2xl">
+                  <div className="absolute left-1/2 top-0 h-6 w-24 -translate-x-1/2 rounded-b-2xl bg-gray-100" aria-hidden />
+                  <div className="overflow-hidden rounded-[1.5rem] bg-gray-100 border border-gray-200">
+                    <div className="bg-gray-200/80 px-4 py-3 border-b border-gray-200 flex gap-2">
+                      <span className="font-semibold text-gray-900 text-sm">My Attendance</span>
+                      <span className="text-xs text-gray-500 ml-auto">Today</span>
+                      <span className="text-xs text-gray-500">Month</span>
                     </div>
-                    <div className="px-3 py-2 text-xs text-slate-400 text-center">Calendar view</div>
+                    <div className="px-3 py-2 text-xs text-gray-500 text-center">Calendar view</div>
                     <div className="px-3 pb-2 space-y-2">
                       {["08:30", "09:00", "10:00"].map((time, i) => (
                         <div key={i} className="flex items-center gap-2 text-sm">
                           <span className="w-1 h-8 rounded-full bg-emerald-500" aria-hidden />
-                          <span className="text-slate-200">{time}</span>
+                          <span className="text-gray-700">{time}</span>
                         </div>
                       ))}
                     </div>

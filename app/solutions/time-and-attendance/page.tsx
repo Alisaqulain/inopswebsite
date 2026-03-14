@@ -101,7 +101,7 @@ function ServiceIcon({ icon, className }: { icon: string; className?: string }) 
 export default function TimeAndAttendancePage() {
   return (
     <>
-      <div className="min-h-screen bg-[var(--background)]">
+      <div className="min-h-screen bg-white text-gray-900">
         {/* Hero – dark blue-grey with clock illustration */}
         <motion.section
           className="relative min-h-[320px] flex flex-col items-center justify-center overflow-hidden"
@@ -109,7 +109,7 @@ export default function TimeAndAttendancePage() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="absolute inset-0 bg-slate-800" />
+          <div className="absolute inset-0 bg-gray-900" />
           <div
             className="absolute inset-0 opacity-30"
             style={{
@@ -118,7 +118,7 @@ export default function TimeAndAttendancePage() {
             }}
           />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(6,182,212,0.12),transparent)]" />
-          <div className="absolute right-[5%] top-1/2 -translate-y-1/2 w-32 h-40 rounded-lg bg-slate-600/30 border border-slate-500/20 hidden lg:block" aria-hidden />
+          <div className="absolute right-[5%] top-1/2 -translate-y-1/2 w-32 h-40 rounded-lg bg-gray-600/30 border border-gray-500/20 hidden lg:block" aria-hidden />
           <div className="relative z-10 text-center px-6">
             <motion.h1
               className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl"
@@ -139,13 +139,13 @@ export default function TimeAndAttendancePage() {
                 Home
               </Link>
               <span className="mx-2 text-white/60">/</span>
-              <span className="text-cyan-300 font-medium">Time & Attendance</span>
+              <span className="text-blue-300 font-medium">Time & Attendance</span>
             </motion.nav>
           </div>
         </motion.section>
 
         {/* Main content – title, intro, benefits diagram, description */}
-        <section className="py-16 lg:py-24 bg-slate-900 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-start">
               {/* Left: title + circular benefits infographic */}
@@ -159,7 +159,7 @@ export default function TimeAndAttendancePage() {
                 <h2 className="text-2xl font-bold text-white sm:text-3xl">
                   Time & Attendance
                 </h2>
-                <p className="mt-4 text-slate-300 leading-relaxed text-base lg:max-w-md">
+                <p className="mt-4 text-gray-600 leading-relaxed text-base lg:max-w-md">
                   Inopes Company introduces an innovative Time & Attendance Biometric Device, revolutionizing how businesses manage their workforce.
                 </p>
                 {/* Circular benefits infographic */}
@@ -226,13 +226,13 @@ export default function TimeAndAttendancePage() {
                 viewport={viewport}
                 transition={{ duration: 0.6, ease: smoothEase, delay: 0.1 }}
               >
-                <p className="text-slate-300 leading-relaxed text-base sm:text-lg">
+                <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
                   With cutting-edge technology and user-friendly features, our device streamlines attendance tracking, boosts productivity, and ensures accurate timekeeping. Below are eight features and benefits that set our device apart:
                 </p>
                 {/* Benefit list as text backup */}
                 <ul className="mt-8 space-y-3">
                   {benefits.map((b, i) => (
-                    <li key={b.label} className="flex items-center gap-3 text-slate-300">
+                    <li key={b.label} className="flex items-center gap-3 text-gray-600">
                       <span className={`flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full ${b.color} text-sm font-bold text-white`}>
                         {i + 1}
                       </span>
@@ -246,7 +246,7 @@ export default function TimeAndAttendancePage() {
         </section>
 
         {/* Features & Benefits */}
-        <section className="py-16 lg:py-24 bg-slate-800/50 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <motion.h2
               className="text-center text-2xl font-bold text-white sm:text-3xl"
@@ -257,7 +257,7 @@ export default function TimeAndAttendancePage() {
             >
               Features & Benefits
             </motion.h2>
-            <div className="mx-auto mt-2 h-0.5 w-20 rounded-full bg-cyan-500" aria-hidden />
+            <div className="mx-auto mt-2 h-0.5 w-20 rounded-full bg-blue-500" aria-hidden />
             <div className="mt-14 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-x-16 lg:gap-y-12">
               {featuresAndBenefits.map((item, i) => (
                 <motion.div
@@ -272,11 +272,11 @@ export default function TimeAndAttendancePage() {
                     <CheckIcon className="h-5 w-5 text-white" />
                   </span>
                   <div className="space-y-3">
-                    <h3 className="font-bold text-slate-100">{item.title}</h3>
-                    <p className="text-slate-300 text-sm leading-relaxed">{item.description}</p>
+                    <h3 className="font-bold text-gray-900">{item.title}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
                     <div>
-                      <p className="font-semibold text-cyan-300 text-sm">{item.sub.title}</p>
-                      <p className="mt-1 text-slate-400 text-sm leading-relaxed">{item.sub.text}</p>
+                      <p className="font-semibold text-blue-300 text-sm">{item.sub.title}</p>
+                      <p className="mt-1 text-gray-500 text-sm leading-relaxed">{item.sub.text}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -286,7 +286,7 @@ export default function TimeAndAttendancePage() {
         </section>
 
         {/* Time & Attendance Biometric Device – title + empowerment paragraph */}
-        <section className="py-12 lg:py-16 bg-slate-900 border-t border-slate-700/80">
+        <section className="py-12 lg:py-16 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-4xl px-6 lg:px-12 text-center">
             <motion.h2
               className="text-2xl font-bold text-white sm:text-3xl"
@@ -297,9 +297,9 @@ export default function TimeAndAttendancePage() {
             >
               Time & Attendance Biometric Device
             </motion.h2>
-            <div className="mx-auto mt-2 h-0.5 w-16 rounded-full bg-cyan-500" aria-hidden />
+            <div className="mx-auto mt-2 h-0.5 w-16 rounded-full bg-blue-500" aria-hidden />
             <motion.p
-              className="mt-6 text-slate-300 leading-relaxed text-base sm:text-lg"
+              className="mt-6 text-gray-600 leading-relaxed text-base sm:text-lg"
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -311,7 +311,7 @@ export default function TimeAndAttendancePage() {
         </section>
 
         {/* Product visualization – device + software on monitor */}
-        <section className="py-16 lg:py-24 bg-slate-800/50 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
               <motion.div
@@ -321,7 +321,7 @@ export default function TimeAndAttendancePage() {
                 viewport={viewport}
                 transition={{ duration: 0.6, ease: smoothEase }}
               >
-                <div className="relative aspect-[4/3] max-w-md mx-auto rounded-2xl overflow-hidden border border-slate-600/80 bg-slate-800 shadow-xl">
+                <div className="relative aspect-[4/3] max-w-md mx-auto rounded-2xl overflow-hidden border border-gray-200 bg-gray-900 shadow-xl">
                   <Image
                     src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=85"
                     alt="Time and attendance biometric device"
@@ -329,10 +329,10 @@ export default function TimeAndAttendancePage() {
                     className="object-cover object-center"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4 rounded-lg bg-slate-900/90 px-4 py-3 font-mono text-white">
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 rounded-lg bg-white/90 px-4 py-3 font-mono text-white">
                     <p className="text-2xl font-bold">08:30</p>
-                    <p className="text-xs text-slate-300">Thursday 23 November</p>
+                    <p className="text-xs text-gray-600">Thursday 23 November</p>
                   </div>
                 </div>
               </motion.div>
@@ -343,7 +343,7 @@ export default function TimeAndAttendancePage() {
                 viewport={viewport}
                 transition={{ duration: 0.6, ease: smoothEase, delay: 0.1 }}
               >
-                <div className="relative aspect-[4/3] max-w-md mx-auto rounded-2xl overflow-hidden border border-slate-600/80 bg-slate-800 shadow-xl">
+                <div className="relative aspect-[4/3] max-w-md mx-auto rounded-2xl overflow-hidden border border-gray-200 bg-gray-900 shadow-xl">
                   <Image
                     src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=85"
                     alt="Attendance software dashboard on monitor"
@@ -351,18 +351,18 @@ export default function TimeAndAttendancePage() {
                     className="object-cover object-center"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent" />
-                  <div className="absolute top-4 left-4 right-4 flex items-center justify-between text-xs text-slate-300">
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent" />
+                  <div className="absolute top-4 left-4 right-4 flex items-center justify-between text-xs text-gray-600">
                     <span>Weekly</span>
                     <span>Planning</span>
                     <span>Reporting</span>
                     <span>John Scott</span>
                   </div>
-                  <div className="absolute bottom-4 left-4 right-4 rounded-lg bg-slate-900/90 p-3 text-white">
+                  <div className="absolute bottom-4 left-4 right-4 rounded-lg bg-white/95 p-3 text-gray-900">
                     <p className="text-lg font-bold">01:23 — Friday 18th September</p>
                     <div className="mt-2 flex flex-wrap gap-2 text-xs">
                       {["Present", "Absent", "Late", "Early Leave", "Overtime", "Leave Day", "Holiday"].map((l) => (
-                        <span key={l} className="rounded bg-slate-700 px-2 py-0.5">{l}</span>
+                        <span key={l} className="rounded bg-gray-200 px-2 py-0.5">{l}</span>
                       ))}
                     </div>
                   </div>
@@ -373,7 +373,7 @@ export default function TimeAndAttendancePage() {
         </section>
 
         {/* Powerful Services for Your Business */}
-        <section className="py-16 lg:py-24 bg-slate-900 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <motion.h2
               className="text-2xl font-bold text-white sm:text-3xl"
@@ -384,12 +384,12 @@ export default function TimeAndAttendancePage() {
             >
               Powerful Services for Your Business
             </motion.h2>
-            <div className="mt-2 h-0.5 w-20 rounded-full bg-cyan-500" />
+            <div className="mt-2 h-0.5 w-20 rounded-full bg-blue-500" />
             <div className="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {powerfulServices.map((service, i) => (
                 <motion.div
                   key={service.title}
-                  className="flex items-start gap-4 rounded-xl border border-slate-600/80 bg-slate-800/80 p-6 backdrop-blur-sm"
+                  className="flex items-start gap-4 rounded-xl border border-gray-200 bg-white p-6 backdrop-blur-sm"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={viewport}
@@ -398,7 +398,7 @@ export default function TimeAndAttendancePage() {
                   <span className={`flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg ${service.color} text-white`}>
                     <ServiceIcon icon={service.icon} />
                   </span>
-                  <h3 className="font-semibold text-slate-100">{service.title}</h3>
+                  <h3 className="font-semibold text-gray-900">{service.title}</h3>
                 </motion.div>
               ))}
             </div>
@@ -406,7 +406,7 @@ export default function TimeAndAttendancePage() {
         </section>
 
         {/* Empowering Smarter Workplaces + mobile app */}
-        <section className="py-16 lg:py-24 bg-slate-800/50 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
               <motion.div
@@ -416,15 +416,15 @@ export default function TimeAndAttendancePage() {
                 viewport={viewport}
                 transition={{ duration: 0.6, ease: smoothEase }}
               >
-                <h2 className="text-2xl font-bold text-cyan-400 sm:text-3xl">
+                <h2 className="text-2xl font-bold text-blue-400 sm:text-3xl">
                   Empowering Smarter Workplaces Across all Industries
                 </h2>
-                <p className="mt-6 text-slate-300 leading-relaxed text-base sm:text-lg">
+                <p className="mt-6 text-gray-600 leading-relaxed text-base sm:text-lg">
                   InOps Tech empowers smarter workplaces across diverse industries by providing innovative technology solutions tailored to optimize efficiency, collaboration, and productivity.
                 </p>
                 <Link
                   href="/contact"
-                  className="mt-8 inline-flex items-center rounded-xl bg-cyan-600 px-6 py-3 font-semibold text-white shadow-lg shadow-cyan-500/25 transition hover:bg-cyan-500"
+                  className="mt-8 inline-flex items-center rounded-xl bg-blue-500 px-6 py-3 font-semibold text-white shadow-lg transition hover:bg-blue-600"
                 >
                   Get Started
                 </Link>
@@ -436,36 +436,36 @@ export default function TimeAndAttendancePage() {
                 viewport={viewport}
                 transition={{ duration: 0.6, ease: smoothEase, delay: 0.1 }}
               >
-                <div className="relative w-[280px] rounded-[2.5rem] border-[10px] border-slate-800 bg-slate-800 p-2 shadow-2xl">
-                  <div className="absolute left-1/2 top-0 h-6 w-24 -translate-x-1/2 rounded-b-2xl bg-slate-800" aria-hidden />
-                  <div className="overflow-hidden rounded-[1.5rem] bg-slate-800 border border-slate-600/80">
-                    <div className="bg-slate-700/80 px-4 py-3 flex items-center justify-between border-b border-slate-600/80">
-                      <span className="font-semibold text-slate-100 text-sm">My Attendance</span>
+                <div className="relative w-[280px] rounded-[2.5rem] border-[10px] border-gray-200 bg-gray-100 p-2 shadow-2xl">
+                  <div className="absolute left-1/2 top-0 h-6 w-24 -translate-x-1/2 rounded-b-2xl bg-gray-100" aria-hidden />
+                  <div className="overflow-hidden rounded-[1.5rem] bg-gray-100 border border-gray-200">
+                    <div className="bg-gray-200/80 px-4 py-3 flex items-center justify-between border-b border-gray-200">
+                      <span className="font-semibold text-gray-900 text-sm">My Attendance</span>
                       <div className="flex gap-2">
-                        <svg className="h-5 w-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-                        <svg className="h-5 w-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
+                        <svg className="h-5 w-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                        <svg className="h-5 w-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
                       </div>
                     </div>
-                    <div className="flex gap-1 p-2 border-b border-slate-600/80">
-                      <button type="button" className="flex-1 rounded-lg bg-cyan-500/20 py-2 text-xs font-medium text-cyan-300">SCAN</button>
-                      <button type="button" className="flex-1 rounded-lg bg-slate-700 py-2 text-xs font-medium text-slate-400">ADMIN</button>
+                    <div className="flex gap-1 p-2 border-b border-gray-200">
+                      <button type="button" className="flex-1 rounded-lg bg-blue-500/20 py-2 text-xs font-medium text-blue-300">SCAN</button>
+                      <button type="button" className="flex-1 rounded-lg bg-gray-200 py-2 text-xs font-medium text-gray-500">ADMIN</button>
                     </div>
-                    <div className="px-3 py-2 text-xs text-slate-400 font-medium text-center">&lt; 13-Jan-2019 - 19-Jan-2019 &gt;</div>
+                    <div className="px-3 py-2 text-xs text-gray-500 font-medium text-center">&lt; 13-Jan-2019 - 19-Jan-2019 &gt;</div>
                     <div className="px-3 pb-2 space-y-2">
                       {[
                         { time: "11:00", label: "CHECK IN", color: "bg-emerald-500" },
                         { time: "14:20", label: "CHECK OUT", color: "bg-rose-500" },
                         { time: "—", label: "LEAVE DAY", color: "bg-amber-500" },
-                        { time: "—", label: "HOLIDAY", color: "bg-slate-600" },
+                        { time: "—", label: "HOLIDAY", color: "bg-gray-500" },
                       ].map((row) => (
                         <div key={row.label} className="flex items-center gap-2 text-sm">
                           <span className={`w-1 h-6 rounded-full ${row.color}`} aria-hidden />
-                          <span className="text-slate-200">{row.time}</span>
-                          <span className="text-slate-400 text-xs">{row.label}</span>
+                          <span className="text-gray-700">{row.time}</span>
+                          <span className="text-gray-500 text-xs">{row.label}</span>
                         </div>
                       ))}
                     </div>
-                    <div className="p-3 border-t border-slate-600/80">
+                    <div className="p-3 border-t border-gray-200">
                       <button type="button" className="w-full rounded-lg bg-emerald-500 py-3 text-sm font-semibold text-white">Check In</button>
                     </div>
                   </div>

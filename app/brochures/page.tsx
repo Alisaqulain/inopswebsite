@@ -49,7 +49,7 @@ const brochures = [
 export default function BrochuresPage() {
   return (
     <>
-      <div className="min-h-screen bg-[var(--background)]">
+      <div className="min-h-screen bg-white text-gray-900">
         {/* Hero */}
         <motion.section
           className="relative min-h-[280px] flex flex-col items-center justify-center overflow-hidden"
@@ -66,9 +66,9 @@ export default function BrochuresPage() {
               sizes="100vw"
               priority
             />
-            <div className="absolute inset-0 bg-slate-900/70" />
+            <div className="absolute inset-0 bg-gray-900/70" />
           </div>
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(6,182,212,0.1),transparent)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(59,130,246,0.12),transparent)]" />
           <div className="relative z-10 text-center px-6">
             <motion.h1
               className="text-4xl font-bold tracking-tight text-white sm:text-5xl"
@@ -89,16 +89,16 @@ export default function BrochuresPage() {
                 Home
               </Link>
               <span className="mx-2 text-white/60">/</span>
-              <span className="text-cyan-300 font-medium">Brochures</span>
+              <span className="text-blue-300 font-medium">Brochures</span>
             </motion.nav>
           </div>
         </motion.section>
 
         {/* Intro */}
-        <section className="py-12 lg:py-16 bg-slate-900 border-t border-slate-700/80">
+        <section className="py-12 lg:py-16 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-3xl px-6 lg:px-12 text-center">
             <motion.p
-              className="text-slate-300 leading-relaxed text-base sm:text-lg"
+              className="text-gray-600 leading-relaxed text-base sm:text-lg"
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -110,19 +110,19 @@ export default function BrochuresPage() {
         </section>
 
         {/* Brochures grid */}
-        <section className="py-16 lg:py-24 bg-slate-800/30 border-t border-slate-700/80">
+        <section className="py-28 lg:py-40 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
               {brochures.map((brochure, i) => (
                 <motion.article
                   key={brochure.title}
-                  className="group flex flex-col rounded-2xl border border-slate-600/80 bg-slate-800/80 shadow-sm overflow-hidden transition-all hover:shadow-lg hover:border-cyan-500/30"
+                  className="group flex flex-col rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden transition-all hover:shadow-lg hover:border-blue-200"
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={viewport}
                   transition={{ duration: 0.5, ease: smoothEase, delay: 0.05 * i }}
                 >
-                  <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-700/50">
+                  <div className="relative aspect-[4/3] w-full overflow-hidden bg-gray-100">
                     <Image
                       src={brochure.image}
                       alt=""
@@ -131,21 +131,21 @@ export default function BrochuresPage() {
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                     <div className="absolute top-3 left-3">
-                      <span className="rounded-full bg-cyan-500/90 px-2.5 py-0.5 text-xs font-medium text-white">
+                      <span className="rounded-full bg-blue-500 px-2.5 py-0.5 text-xs font-medium text-white">
                         {brochure.category}
                       </span>
                     </div>
                   </div>
                   <div className="flex flex-1 flex-col p-6">
-                    <h2 className="text-lg font-bold leading-tight text-white sm:text-xl">
+                    <h2 className="text-lg font-bold leading-tight text-gray-900 sm:text-xl">
                       {brochure.title}
                     </h2>
-                    <p className="mt-3 flex-1 text-sm text-slate-300 leading-relaxed line-clamp-3">
+                    <p className="mt-3 flex-1 text-sm text-gray-600 leading-relaxed line-clamp-3">
                       {brochure.description}
                     </p>
                     <a
                       href="#"
-                      className="mt-5 inline-flex items-center justify-center gap-2 rounded-xl bg-cyan-600 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-cyan-500"
+                      className="mt-5 inline-flex items-center justify-center gap-2 rounded-xl bg-blue-500 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-600"
                     >
                       <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />

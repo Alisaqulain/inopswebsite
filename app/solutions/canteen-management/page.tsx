@@ -108,7 +108,7 @@ const mealTableRows = [
 export default function CanteenManagementPage() {
   return (
     <>
-      <div className="min-h-screen bg-[var(--background)]">
+      <div className="min-h-screen bg-white text-gray-900">
         {/* Hero – dark with abstract canteen-style backdrop */}
         <motion.section
           className="relative min-h-[320px] flex flex-col items-center justify-center overflow-hidden"
@@ -116,7 +116,7 @@ export default function CanteenManagementPage() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="absolute inset-0 bg-slate-800" />
+          <div className="absolute inset-0 bg-gray-100" />
           <div className="absolute inset-0 opacity-20">
             <Image
               src="https://images.unsplash.com/photo-1567521464027-f127ff144326?w=1600&q=60"
@@ -127,7 +127,7 @@ export default function CanteenManagementPage() {
               priority
             />
           </div>
-          <div className="absolute inset-0 bg-slate-900/80" />
+          <div className="absolute inset-0 bg-gray-900/80" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(6,182,212,0.12),transparent)]" />
           <div className="relative z-10 text-center px-6">
             <motion.h1
@@ -149,13 +149,13 @@ export default function CanteenManagementPage() {
                 Home
               </Link>
               <span className="mx-2 text-white/60">/</span>
-              <span className="text-cyan-300 font-medium">Canteen Management System</span>
+              <span className="text-blue-300 font-medium">Canteen Management System</span>
             </motion.nav>
           </div>
         </motion.section>
 
         {/* Content – infographic left, text right */}
-        <section className="py-16 lg:py-24 bg-slate-900 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
               {/* Left – semi-circular / pie-style infographic */}
@@ -236,13 +236,13 @@ export default function CanteenManagementPage() {
                 viewport={viewport}
                 transition={{ duration: 0.6, ease: smoothEase, delay: 0.1 }}
               >
-                <h2 className="text-2xl font-bold text-white sm:text-3xl lg:text-4xl">
+                <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl lg:text-4xl">
                   Canteen Management System
                 </h2>
-                <p className="mt-6 text-slate-300 leading-relaxed text-base sm:text-lg">
+                <p className="mt-6 text-gray-600 leading-relaxed text-base sm:text-lg">
                   Welcome to the InOps Company Canteen Management System, where we redefine the dining experience for organizations with our cutting-edge technology and comprehensive features.
                 </p>
-                <p className="mt-4 text-slate-300 leading-relaxed text-base sm:text-lg">
+                <p className="mt-4 text-gray-600 leading-relaxed text-base sm:text-lg">
                   Our system is designed to streamline canteen operations, enhance efficiency, and elevate the dining experience for employees. Explore the eight key features and their corresponding benefits:
                 </p>
               </motion.div>
@@ -251,10 +251,10 @@ export default function CanteenManagementPage() {
         </section>
 
         {/* Features & Benefits */}
-        <section className="py-16 lg:py-24 bg-slate-800/50 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <motion.h2
-              className="text-center text-2xl font-bold text-white sm:text-3xl"
+              className="text-center text-2xl font-bold text-gray-900 sm:text-3xl"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -262,7 +262,7 @@ export default function CanteenManagementPage() {
             >
               Features & Benefits
             </motion.h2>
-            <div className="mx-auto mt-2 h-0.5 w-20 rounded-full bg-cyan-500" aria-hidden />
+            <div className="mx-auto mt-2 h-0.5 w-20 rounded-full bg-blue-500" aria-hidden />
             <div className="mt-14 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-x-16 lg:gap-y-12">
               {featuresAndBenefits.map((item, i) => (
                 <motion.div
@@ -277,9 +277,9 @@ export default function CanteenManagementPage() {
                     <CheckIcon className="h-5 w-5 text-white" />
                   </span>
                   <div className="space-y-2">
-                    <h3 className="font-bold text-slate-100">{item.title}</h3>
-                    <p className="text-slate-300 text-sm leading-relaxed">{item.description}</p>
-                    <p className="font-semibold text-cyan-300 text-sm">{item.benefit}</p>
+                    <h3 className="font-bold text-gray-900">{item.title}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+                    <p className="font-semibold text-blue-300 text-sm">{item.benefit}</p>
                   </div>
                 </motion.div>
               ))}
@@ -288,7 +288,7 @@ export default function CanteenManagementPage() {
         </section>
 
         {/* Canteen Management System – title, paragraph, laptop mockup */}
-        <section className="py-16 lg:py-24 bg-slate-900 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <motion.div
               className="text-center max-w-4xl mx-auto"
@@ -297,11 +297,11 @@ export default function CanteenManagementPage() {
               viewport={viewport}
               transition={{ duration: 0.5, ease: smoothEase }}
             >
-              <h2 className="text-2xl font-bold text-white sm:text-3xl">
+              <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">
                 Canteen Management System
               </h2>
-              <div className="mx-auto mt-2 h-0.5 w-24 rounded-full bg-slate-500" aria-hidden />
-              <p className="mt-6 text-slate-300 leading-relaxed text-base sm:text-lg">
+              <div className="mx-auto mt-2 h-0.5 w-24 rounded-full bg-blue-500" aria-hidden />
+              <p className="mt-6 text-gray-600 leading-relaxed text-base sm:text-lg">
                 At InOps Solution, we believe that a well-managed canteen is essential for fostering a healthy and productive work environment. With our Canteen Management System&apos;s advanced features and corresponding benefits, organizations can transform their dining facilities into efficient, employee-friendly spaces that promote well-being and satisfaction. Join us in revolutionizing workplace dining experiences with InOps Company today.
               </p>
             </motion.div>
@@ -313,29 +313,29 @@ export default function CanteenManagementPage() {
               transition={{ duration: 0.6, ease: smoothEase, delay: 0.1 }}
             >
               {/* Laptop mockup – Meal Consumption screen */}
-              <div className="w-full max-w-4xl rounded-b-2xl border border-slate-600/80 bg-slate-800 shadow-2xl overflow-hidden">
-                <div className="flex items-center gap-2 border-b border-slate-600/80 bg-slate-700/80 px-4 py-2">
+              <div className="w-full max-w-4xl rounded-b-2xl border border-gray-200 bg-gray-100 shadow-2xl overflow-hidden">
+                <div className="flex items-center gap-2 border-b border-gray-200 bg-gray-200/80 px-4 py-2">
                   <div className="flex gap-1.5">
                     <span className="h-2.5 w-2.5 rounded-full bg-rose-500" />
                     <span className="h-2.5 w-2.5 rounded-full bg-amber-500" />
                     <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />
                   </div>
-                  <span className="flex-1 text-center text-sm font-medium text-slate-300">Meal Consumption</span>
+                  <span className="flex-1 text-center text-sm font-medium text-gray-600">Meal Consumption</span>
                 </div>
                 <div className="p-4 space-y-3">
                   <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-2">
-                    <input type="text" placeholder="Meal Request ID" className="rounded border border-slate-600 bg-slate-700 px-2 py-1.5 text-xs text-slate-200 placeholder-slate-400" readOnly />
+                    <input type="text" placeholder="Meal Request ID" className="rounded border border-gray-200 bg-gray-200 px-2 py-1.5 text-xs text-gray-700 placeholder-gray-500" readOnly />
                     <div className="flex gap-1 col-span-2">
-                      <input type="text" placeholder="From" defaultValue="28/10/2019" className="flex-1 rounded border border-slate-600 bg-slate-700 px-2 py-1.5 text-xs text-slate-200" readOnly />
-                      <input type="text" placeholder="To" className="flex-1 rounded border border-slate-600 bg-slate-700 px-2 py-1.5 text-xs text-slate-200" readOnly />
+                      <input type="text" placeholder="From" defaultValue="28/10/2019" className="flex-1 rounded border border-gray-200 bg-gray-200 px-2 py-1.5 text-xs text-gray-700" readOnly />
+                      <input type="text" placeholder="To" className="flex-1 rounded border border-gray-200 bg-gray-200 px-2 py-1.5 text-xs text-gray-700" readOnly />
                     </div>
-                    <select className="rounded border border-slate-600 bg-slate-700 px-2 py-1.5 text-xs text-slate-300" defaultValue="">
+                    <select className="rounded border border-gray-200 bg-gray-200 px-2 py-1.5 text-xs text-gray-600" defaultValue="">
                       <option>Meal Request Name -Select-</option>
                     </select>
-                    <select className="rounded border border-slate-600 bg-slate-700 px-2 py-1.5 text-xs text-slate-300" defaultValue="all">
+                    <select className="rounded border border-gray-200 bg-gray-200 px-2 py-1.5 text-xs text-gray-600" defaultValue="all">
                       <option>Meal Type: All</option>
                     </select>
-                    <select className="rounded border border-slate-600 bg-slate-700 px-2 py-1.5 text-xs text-slate-300" defaultValue="all">
+                    <select className="rounded border border-gray-200 bg-gray-200 px-2 py-1.5 text-xs text-gray-600" defaultValue="all">
                       <option>Meal Status: All</option>
                     </select>
                   </div>
@@ -343,23 +343,23 @@ export default function CanteenManagementPage() {
                     <button type="button" className="rounded bg-rose-500 px-3 py-1.5 text-xs font-medium text-white">Search</button>
                     <button type="button" className="rounded bg-amber-500 px-3 py-1.5 text-xs font-medium text-white">Clear</button>
                   </div>
-                  <div className="overflow-x-auto rounded border border-slate-600">
+                  <div className="overflow-x-auto rounded border border-gray-200">
                     <table className="w-full min-w-[600px] text-xs">
                       <thead>
-                        <tr className="border-b border-slate-600 bg-slate-700/80">
-                          <th className="px-2 py-2 text-left font-medium text-slate-300">Select</th>
-                          <th className="px-2 py-2 text-left font-medium text-slate-300">Meal Requested Date</th>
-                          <th className="px-2 py-2 text-left font-medium text-slate-300">Meal Request ID</th>
-                          <th className="px-2 py-2 text-left font-medium text-slate-300">Meal Requested Name</th>
-                          <th className="px-2 py-2 text-left font-medium text-slate-300">Meal Type</th>
-                          <th className="px-2 py-2 text-left font-medium text-slate-300">Total(INR)</th>
-                          <th className="px-2 py-2 text-left font-medium text-slate-300">Payment Status</th>
-                          <th className="px-2 py-2 text-left font-medium text-slate-300">Meal Consumption Status</th>
+                        <tr className="border-b border-gray-200 bg-gray-200/80">
+                          <th className="px-2 py-2 text-left font-medium text-gray-600">Select</th>
+                          <th className="px-2 py-2 text-left font-medium text-gray-600">Meal Requested Date</th>
+                          <th className="px-2 py-2 text-left font-medium text-gray-600">Meal Request ID</th>
+                          <th className="px-2 py-2 text-left font-medium text-gray-600">Meal Requested Name</th>
+                          <th className="px-2 py-2 text-left font-medium text-gray-600">Meal Type</th>
+                          <th className="px-2 py-2 text-left font-medium text-gray-600">Total(INR)</th>
+                          <th className="px-2 py-2 text-left font-medium text-gray-600">Payment Status</th>
+                          <th className="px-2 py-2 text-left font-medium text-gray-600">Meal Consumption Status</th>
                         </tr>
                       </thead>
-                      <tbody className="text-slate-400">
+                      <tbody className="text-gray-500">
                         {mealTableRows.map((row, i) => (
-                          <tr key={i} className="border-b border-slate-600/80">
+                          <tr key={i} className="border-b border-gray-200">
                             <td className="px-2 py-1.5"><input type="checkbox" className="rounded" readOnly /></td>
                             <td className="px-2 py-1.5">{row.date}</td>
                             <td className="px-2 py-1.5">{row.id}</td>
@@ -373,7 +373,7 @@ export default function CanteenManagementPage() {
                       </tbody>
                     </table>
                   </div>
-                  <div className="flex justify-end text-xs text-slate-400">1 &lt; 1 &gt; 100</div>
+                  <div className="flex justify-end text-xs text-gray-500">1 &lt; 1 &gt; 100</div>
                 </div>
               </div>
             </motion.div>
@@ -381,10 +381,10 @@ export default function CanteenManagementPage() {
         </section>
 
         {/* Powerful Services for Your Business */}
-        <section className="py-16 lg:py-24 bg-slate-800/50 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <motion.h2
-              className="text-2xl font-bold text-white sm:text-3xl"
+              className="text-2xl font-bold text-gray-900 sm:text-3xl"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -392,12 +392,12 @@ export default function CanteenManagementPage() {
             >
               Powerful Services for Your Business
             </motion.h2>
-            <div className="mt-2 h-0.5 w-20 rounded-full bg-cyan-500" />
+            <div className="mt-2 h-0.5 w-20 rounded-full bg-blue-500" />
             <div className="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {powerfulServices.map((service, i) => (
                 <motion.div
                   key={service.title}
-                  className="flex items-start gap-4 rounded-xl border border-slate-600/80 bg-slate-800/80 p-6 backdrop-blur-sm"
+                  className="flex items-start gap-4 rounded-xl border border-gray-200 bg-gray-100/80 p-6 backdrop-blur-sm"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={viewport}
@@ -406,7 +406,7 @@ export default function CanteenManagementPage() {
                   <span className={`flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg ${service.color} text-white`}>
                     <ServiceIcon icon={service.icon} />
                   </span>
-                  <h3 className="font-semibold text-slate-100">{service.title}</h3>
+                  <h3 className="font-semibold text-gray-900">{service.title}</h3>
                 </motion.div>
               ))}
             </div>
@@ -414,7 +414,7 @@ export default function CanteenManagementPage() {
         </section>
 
         {/* Empowering Smarter Workplaces + phone mockup */}
-        <section className="py-16 lg:py-24 bg-slate-900 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
               <motion.div
@@ -424,15 +424,15 @@ export default function CanteenManagementPage() {
                 viewport={viewport}
                 transition={{ duration: 0.6, ease: smoothEase }}
               >
-                <h2 className="text-2xl font-bold text-cyan-400 sm:text-3xl">
+                <h2 className="text-2xl font-bold text-blue-400 sm:text-3xl">
                   Empowering Smarter Workplaces Across all Industries
                 </h2>
-                <p className="mt-6 text-slate-300 leading-relaxed text-base sm:text-lg">
+                <p className="mt-6 text-gray-600 leading-relaxed text-base sm:text-lg">
                   InOps Tech empowers smarter workplaces across diverse industries by providing innovative technology solutions tailored to optimize efficiency, collaboration, and productivity.
                 </p>
                 <Link
                   href="/contact"
-                  className="mt-8 inline-flex items-center rounded-xl bg-cyan-600 px-6 py-3 font-semibold text-white shadow-lg shadow-cyan-500/25 transition hover:bg-cyan-500"
+                  className="mt-8 inline-flex items-center rounded-xl bg-blue-500 px-6 py-3 font-semibold text-white shadow-lg transition hover:bg-blue-600"
                 >
                   Get Started
                 </Link>
@@ -444,22 +444,22 @@ export default function CanteenManagementPage() {
                 viewport={viewport}
                 transition={{ duration: 0.6, ease: smoothEase, delay: 0.1 }}
               >
-                <div className="relative w-[280px] rounded-[2.5rem] border-[10px] border-slate-800 bg-slate-800 p-2 shadow-2xl">
-                  <div className="absolute left-1/2 top-0 h-6 w-24 -translate-x-1/2 rounded-b-2xl bg-slate-800" aria-hidden />
-                  <div className="overflow-hidden rounded-[1.5rem] bg-slate-800 border border-slate-600/80">
-                    <div className="bg-slate-700/80 px-4 py-3 border-b border-slate-600/80">
-                      <span className="font-semibold text-slate-100 text-sm">My Attendance</span>
+                <div className="relative w-[280px] rounded-[2.5rem] border-[10px] border-gray-200 bg-gray-100 p-2 shadow-2xl">
+                  <div className="absolute left-1/2 top-0 h-6 w-24 -translate-x-1/2 rounded-b-2xl bg-gray-100" aria-hidden />
+                  <div className="overflow-hidden rounded-[1.5rem] bg-gray-100 border border-gray-200">
+                    <div className="bg-gray-200/80 px-4 py-3 border-b border-gray-200">
+                      <span className="font-semibold text-gray-900 text-sm">My Attendance</span>
                     </div>
-                    <div className="px-3 py-2 text-xs text-slate-400 text-center">12 - Jan 2018 - 19 - Jan 2018</div>
+                    <div className="px-3 py-2 text-xs text-gray-500 text-center">12 - Jan 2018 - 19 - Jan 2018</div>
                     <div className="px-3 pb-2 space-y-2">
                       {["10:00", "10:00", "10:00", "10:00", "10:00"].map((time, i) => (
                         <div key={i} className="flex items-center gap-2 text-sm">
                           <span className={`w-1 h-8 rounded-full ${["bg-emerald-500", "bg-rose-500", "bg-amber-500", "bg-orange-500", "bg-cyan-500"][i % 5]}`} aria-hidden />
-                          <span className="text-slate-200">{time}</span>
+                          <span className="text-gray-700">{time}</span>
                         </div>
                       ))}
                     </div>
-                    <div className="p-3 border-t border-slate-600/80 text-center text-sm text-slate-400">Total Hours 09:43</div>
+                    <div className="p-3 border-t border-gray-200 text-center text-sm text-gray-500">Total Hours 09:43</div>
                   </div>
                 </div>
               </motion.div>

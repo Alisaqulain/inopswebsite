@@ -100,7 +100,7 @@ function ServiceIcon({ icon }: { icon: string }) {
 export default function FixedAssetManagementPage() {
   return (
     <>
-      <div className="min-h-screen bg-[var(--background)]">
+      <div className="min-h-screen bg-white text-gray-900">
         {/* Hero – dark industrial (factory/warehouse) backdrop */}
         <motion.section
           className="relative min-h-[320px] flex flex-col items-center justify-center overflow-hidden"
@@ -108,7 +108,7 @@ export default function FixedAssetManagementPage() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="absolute inset-0 bg-slate-800" />
+          <div className="absolute inset-0 bg-gray-900" />
           <div className="absolute inset-0 opacity-30">
             <Image
               src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1600&q=60"
@@ -119,8 +119,8 @@ export default function FixedAssetManagementPage() {
               priority
             />
           </div>
-          <div className="absolute inset-0 bg-slate-900/85" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(6,182,212,0.12),transparent)]" />
+          <div className="absolute inset-0 bg-gray-900/70" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(6,182,212,0.15),transparent)]" />
           <div className="relative z-10 text-center px-6">
             <motion.h1
               className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl"
@@ -131,23 +131,23 @@ export default function FixedAssetManagementPage() {
               Fixed Asset Management
             </motion.h1>
             <motion.nav
-              className="mt-4 text-sm text-white/90"
+              className="mt-4 text-sm text-white"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: smoothEase, delay: 0.25 }}
               aria-label="Breadcrumb"
             >
-              <Link href="/" className="hover:text-white transition-colors">
+              <Link href="/" className="text-white hover:text-white/90 transition-colors">
                 Home
               </Link>
-              <span className="mx-2 text-white/60">/</span>
-              <span className="text-cyan-300 font-medium">Fixed Asset Management</span>
+              <span className="mx-2 text-white/80">/</span>
+              <span className="text-blue-400 font-medium">Fixed Asset Management</span>
             </motion.nav>
           </div>
         </motion.section>
 
         {/* Content – asset register diagram left, text right */}
-        <section className="py-16 lg:py-24 bg-slate-900 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
               {/* Left – circular diagram: ASSET REGISTER center + segments */}
@@ -253,13 +253,13 @@ export default function FixedAssetManagementPage() {
                 viewport={viewport}
                 transition={{ duration: 0.6, ease: smoothEase, delay: 0.1 }}
               >
-                <h2 className="text-2xl font-bold text-white sm:text-3xl lg:text-4xl">
+                <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl lg:text-4xl">
                   Fixed Asset Management
                 </h2>
-                <p className="mt-6 text-slate-300 leading-relaxed text-base sm:text-lg">
+                <p className="mt-6 text-gray-600 leading-relaxed text-base sm:text-lg">
                   Welcome to InOps Company&apos;s Fixed Asset Management (FAM) solution, where we simplify and streamline the management of your organization&apos;s valuable assets.
                 </p>
-                <p className="mt-4 text-slate-300 leading-relaxed text-base sm:text-lg">
+                <p className="mt-4 text-gray-600 leading-relaxed text-base sm:text-lg">
                   Our comprehensive FAM system is designed to make asset tracking and maintenance smooth, reliable, and efficient. Explore the eight key features and their corresponding benefits:
                 </p>
               </motion.div>
@@ -268,10 +268,10 @@ export default function FixedAssetManagementPage() {
         </section>
 
         {/* Features & Benefits */}
-        <section className="py-16 lg:py-24 bg-slate-800/50 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <motion.h2
-              className="text-center text-2xl font-bold text-white sm:text-3xl"
+              className="text-center text-2xl font-bold text-gray-900 sm:text-3xl"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -294,9 +294,9 @@ export default function FixedAssetManagementPage() {
                     <CheckIcon className="h-5 w-5 text-white" />
                   </span>
                   <div className="space-y-2">
-                    <h3 className="font-bold text-slate-100">{item.title}</h3>
-                    <p className="text-slate-300 text-sm leading-relaxed">{item.description}</p>
-                    <p className="font-semibold text-cyan-300 text-sm">{item.benefit}</p>
+                    <h3 className="font-bold text-gray-900">{item.title}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+                    <p className="font-semibold text-blue-600 text-sm">{item.benefit}</p>
                   </div>
                 </motion.div>
               ))}
@@ -305,10 +305,10 @@ export default function FixedAssetManagementPage() {
         </section>
 
         {/* Fixed Asset Management solution – intro title + paragraph */}
-        <section className="py-12 lg:py-16 bg-slate-900 border-t border-slate-700/80">
+        <section className="py-12 lg:py-16 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-4xl px-6 lg:px-12 text-center">
             <motion.h2
-              className="text-2xl font-bold text-white sm:text-3xl"
+              className="text-2xl font-bold text-gray-900 sm:text-3xl"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -318,7 +318,7 @@ export default function FixedAssetManagementPage() {
             </motion.h2>
             <div className="mx-auto mt-2 h-0.5 w-24 rounded-full bg-cyan-500" aria-hidden />
             <motion.p
-              className="mt-6 text-slate-300 leading-relaxed text-base sm:text-lg"
+              className="mt-6 text-gray-600 leading-relaxed text-base sm:text-lg"
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -330,23 +330,23 @@ export default function FixedAssetManagementPage() {
         </section>
 
         {/* Laptop – Asset Distribution dashboard mockup */}
-        <section className="py-16 lg:py-24 bg-slate-800/50 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-5xl px-6 lg:px-12">
             <motion.div
-              className="rounded-b-2xl border border-slate-600/80 bg-slate-800 shadow-2xl overflow-hidden"
+              className="rounded-b-2xl border border-gray-600/80 bg-slate-800 shadow-2xl overflow-hidden"
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
               transition={{ duration: 0.6, ease: smoothEase }}
             >
-              <div className="flex items-center gap-2 border-b border-slate-600/80 bg-slate-700/80 px-4 py-2">
+              <div className="flex items-center gap-2 border-b border-gray-600/80 bg-slate-700/80 px-4 py-2">
                 <span className="h-2.5 w-2.5 rounded-full bg-rose-500" />
                 <span className="h-2.5 w-2.5 rounded-full bg-amber-500" />
                 <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />
                 <span className="ml-2 text-sm font-medium text-slate-300">Asset Distribution</span>
               </div>
               <div className="flex min-h-[320px]">
-                <aside className="w-44 flex-shrink-0 border-r border-slate-600/80 bg-slate-800/80 p-3 text-xs text-slate-400 space-y-1">
+                <aside className="w-44 flex-shrink-0 border-r border-gray-600/80 bg-slate-800/80 p-3 text-xs text-slate-400 space-y-1">
                   {["Dashboard", "Assets", "Maintenance", "Transactions", "Reports", "New Profile", "Settings", "Change Password", "Change Theme", "Sign Out"].map((item, i) => (
                     <div key={i} className="flex items-center gap-2 py-1">{item}</div>
                   ))}
@@ -354,7 +354,7 @@ export default function FixedAssetManagementPage() {
                 <div className="flex-1 p-4">
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
                     {[["71", "Total"], ["2", "Pending"], ["5", "Active"], ["12", "Reports"]].map(([num, label], i) => (
-                      <div key={i} className="rounded-lg border border-slate-600/80 bg-slate-700/50 p-3 text-center">
+                      <div key={i} className="rounded-lg border border-gray-600/80 bg-slate-700/50 p-3 text-center">
                         <span className="text-lg font-bold text-white">{num}</span>
                         <span className="block text-xs text-slate-400">{label}</span>
                       </div>
@@ -362,7 +362,7 @@ export default function FixedAssetManagementPage() {
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {["Asset Count Location Wise", "Asset Value Location Wise", "Asset Count Category Wise", "Asset Value Category Wise"].map((title, i) => (
-                      <div key={i} className="rounded-lg border border-slate-600/80 bg-slate-700/30 p-3">
+                      <div key={i} className="rounded-lg border border-gray-600/80 bg-slate-700/30 p-3">
                         <p className="text-xs font-medium text-slate-300 mb-2">{title}</p>
                         <div className="flex items-end gap-1 h-20">
                           {[40, 65, 35, 80, 55].map((h, j) => (
@@ -379,10 +379,10 @@ export default function FixedAssetManagementPage() {
         </section>
 
         {/* Powerful Services for Your Business */}
-        <section className="py-16 lg:py-24 bg-slate-900 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <motion.h2
-              className="text-2xl font-bold text-white sm:text-3xl"
+              className="text-2xl font-bold text-gray-900 sm:text-3xl"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -395,7 +395,7 @@ export default function FixedAssetManagementPage() {
               {powerfulServices.map((service, i) => (
                 <motion.div
                   key={service.title}
-                  className="flex items-start gap-4 rounded-xl border border-slate-600/80 bg-slate-800/80 p-6 backdrop-blur-sm"
+                  className="flex items-start gap-4 rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md hover:border-cyan-100"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={viewport}
@@ -404,7 +404,7 @@ export default function FixedAssetManagementPage() {
                   <span className={`flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg ${service.color} text-white`}>
                     <ServiceIcon icon={service.icon} />
                   </span>
-                  <h3 className="font-semibold text-slate-100">{service.title}</h3>
+                  <h3 className="font-semibold text-gray-900">{service.title}</h3>
                 </motion.div>
               ))}
             </div>
@@ -412,7 +412,7 @@ export default function FixedAssetManagementPage() {
         </section>
 
         {/* Empowering Smarter Workplaces + phone mockup */}
-        <section className="py-16 lg:py-24 bg-slate-800/50 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
               <motion.div
@@ -422,10 +422,10 @@ export default function FixedAssetManagementPage() {
                 viewport={viewport}
                 transition={{ duration: 0.6, ease: smoothEase }}
               >
-                <h2 className="text-2xl font-bold text-cyan-400 sm:text-3xl">
+                <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">
                   Empowering Smarter Workplaces Across all Industries
                 </h2>
-                <p className="mt-6 text-slate-300 leading-relaxed text-base sm:text-lg">
+                <p className="mt-6 text-gray-600 leading-relaxed text-base sm:text-lg">
                   InOps Tech empowers smarter workplaces across diverse industries by providing innovative technology solutions tailored to optimize efficiency, collaboration, and productivity.
                 </p>
                 <Link
@@ -442,13 +442,13 @@ export default function FixedAssetManagementPage() {
                 viewport={viewport}
                 transition={{ duration: 0.6, ease: smoothEase, delay: 0.1 }}
               >
-                <div className="relative w-[280px] rounded-[2.5rem] border-[10px] border-slate-800 bg-slate-800 p-2 shadow-2xl">
+                <div className="relative w-[280px] rounded-[2.5rem] border-[10px] border-gray-800 bg-slate-800 p-2 shadow-2xl">
                   <div className="absolute left-1/2 top-0 h-6 w-24 -translate-x-1/2 rounded-b-2xl bg-slate-800" aria-hidden />
-                  <div className="overflow-hidden rounded-[1.5rem] bg-slate-800 border border-slate-600/80">
-                    <div className="bg-slate-700/80 px-4 py-3 border-b border-slate-600/80 flex items-center justify-between">
+                  <div className="overflow-hidden rounded-[1.5rem] bg-slate-800 border border-gray-600/80">
+                    <div className="bg-slate-700/80 px-4 py-3 border-b border-gray-600/80 flex items-center justify-between">
                       <span className="font-semibold text-slate-100 text-sm">My Attendance</span>
                     </div>
-                    <div className="flex gap-2 px-3 py-2 border-b border-slate-600/80">
+                    <div className="flex gap-2 px-3 py-2 border-b border-gray-600/80">
                       <span className="text-xs font-medium text-white py-1 px-2 rounded bg-emerald-500">PRESENT</span>
                       <span className="text-xs text-slate-400 py-1 px-2">ABSENT</span>
                     </div>
@@ -468,7 +468,7 @@ export default function FixedAssetManagementPage() {
                       ))}
                     </div>
                     <button type="button" className="mx-3 mb-2 w-[calc(100%-24px)] rounded-lg bg-emerald-500 py-2.5 text-sm font-semibold text-white">CHECK IN</button>
-                    <div className="p-3 border-t border-slate-600/80 text-center text-sm text-slate-400">Total Hours (39:42)</div>
+                    <div className="p-3 border-t border-gray-600/80 text-center text-sm text-slate-400">Total Hours (39:42)</div>
                   </div>
                 </div>
               </motion.div>

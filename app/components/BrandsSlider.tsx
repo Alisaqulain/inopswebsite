@@ -25,13 +25,13 @@ const clientLogos = [
 
 function LogoCard({ src }: { src: string }) {
   return (
-    <div className="relative flex h-20 min-w-[140px] flex-shrink-0 items-center justify-center rounded-xl border border-slate-600/80 bg-slate-800 px-6 py-4 shadow-depth transition hover:border-cyan-500/50 hover:shadow-depth sm:min-w-[160px]">
+    <div className="relative flex h-20 min-w-[140px] flex-shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-white px-6 py-4 shadow-sm transition hover:border-blue-200 hover:shadow-md sm:min-w-[160px]">
       <Image
         src={src}
         alt=""
         width={140}
         height={56}
-        className="h-12 w-auto max-w-[120px] object-contain object-center"
+        className="h-12 w-auto max-w-[120px] object-contain object-center opacity-80"
         sizes="140px"
         unoptimized={src.endsWith(".svg")}
       />
@@ -41,10 +41,10 @@ function LogoCard({ src }: { src: string }) {
 
 export default function BrandsSlider() {
   return (
-    <section className="overflow-x-hidden border-t border-slate-700/80 bg-slate-900 py-12 lg:py-16">
+    <section className="overflow-x-hidden border-t border-gray-100 bg-gray-50 py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 lg:px-12">
-        <p className="mb-6 text-center text-sm font-semibold uppercase tracking-wider text-slate-400">Trusted by industry leaders</p>
-        <div className="overflow-hidden rounded-2xl border border-slate-600/80 bg-slate-800 py-8 shadow-depth">
+        <p className="mb-6 text-center text-sm font-semibold uppercase tracking-wider text-gray-500">Trusted by industry leaders</p>
+        <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white py-8 shadow-sm">
           <div className="relative flex">
             <div className="flex animate-marquee gap-8 pr-8">
               {clientLogos.map((src, i) => (

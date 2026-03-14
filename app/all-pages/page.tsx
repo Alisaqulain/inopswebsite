@@ -30,18 +30,18 @@ const resourcePages = [
 
 export default function AllPages() {
   return (
-    <div className="min-h-screen bg-slate-950 px-6 py-16 text-slate-100">
+    <div className="min-h-screen bg-white px-6 py-16 text-gray-900">
       <div className="mx-auto max-w-2xl">
-        <h1 className="text-2xl font-bold text-white sm:text-3xl">All Pages</h1>
-        <p className="mt-2 text-slate-400">Quick links to every page on the site.</p>
+        <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">All Pages</h1>
+        <p className="mt-2 text-gray-600">Quick links to every page on the site.</p>
 
         <section className="mt-10 space-y-6">
           <div>
-            <h2 className="text-sm font-semibold uppercase tracking-wider text-cyan-400">Main</h2>
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-blue-600">Main</h2>
             <ul className="mt-3 space-y-2">
               {mainPages.map((p) => (
                 <li key={p.href}>
-                  <Link href={p.href} className="text-slate-200 underline decoration-cyan-500/50 underline-offset-2 hover:text-cyan-300 hover:decoration-cyan-400">
+                  <Link href={p.href} className="text-gray-700 underline decoration-blue-500/50 underline-offset-2 hover:text-blue-600 hover:decoration-blue-400">
                     {p.label}
                   </Link>
                 </li>
@@ -50,11 +50,11 @@ export default function AllPages() {
           </div>
 
           <div>
-            <h2 className="text-sm font-semibold uppercase tracking-wider text-cyan-400">Product</h2>
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-blue-600">Product</h2>
             <ul className="mt-3 space-y-2">
               {productPages.map((p) => (
                 <li key={p.href}>
-                  <Link href={p.href} className="text-slate-200 underline decoration-cyan-500/50 underline-offset-2 hover:text-cyan-300 hover:decoration-cyan-400">
+                  <Link href={p.href} className="text-gray-700 underline decoration-blue-500/50 underline-offset-2 hover:text-blue-600 hover:decoration-blue-400">
                     {p.label}
                   </Link>
                 </li>
@@ -63,11 +63,11 @@ export default function AllPages() {
           </div>
 
           <div>
-            <h2 className="text-sm font-semibold uppercase tracking-wider text-cyan-400">Solutions</h2>
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-blue-600">Solutions</h2>
             <ul className="mt-3 space-y-2">
               {solutionPages.map((p) => (
                 <li key={p.href}>
-                  <Link href={p.href} className="text-slate-200 underline decoration-cyan-500/50 underline-offset-2 hover:text-cyan-300 hover:decoration-cyan-400">
+                  <Link href={p.href} className="text-gray-700 underline decoration-blue-500/50 underline-offset-2 hover:text-blue-600 hover:decoration-blue-400">
                     {p.label}
                   </Link>
                 </li>
@@ -76,11 +76,11 @@ export default function AllPages() {
           </div>
 
           <div>
-            <h2 className="text-sm font-semibold uppercase tracking-wider text-cyan-400">Resources</h2>
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-blue-600">Resources</h2>
             <ul className="mt-3 space-y-2">
               {resourcePages.map((p) => (
                 <li key={p.href}>
-                  <Link href={p.href} className="text-slate-200 underline decoration-cyan-500/50 underline-offset-2 hover:text-cyan-300 hover:decoration-cyan-400">
+                  <Link href={p.href} className="text-gray-700 underline decoration-blue-500/50 underline-offset-2 hover:text-blue-600 hover:decoration-blue-400">
                     {p.label}
                   </Link>
                 </li>

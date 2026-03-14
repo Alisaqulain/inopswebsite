@@ -53,7 +53,7 @@ const featureBullets = [
   { text: "High-quality electric component", color: "text-amber-500" },
   { text: "Visual indicator for access granted or denied", color: "text-emerald-500" },
   { text: "Patented oil lubrication system reduces the need for maintenance", color: "text-pink-500" },
-  { text: "Stainless steel casework which ensures long-lasting durability", color: "text-cyan-500" },
+  { text: "Stainless steel casework which ensures long-lasting durability", color: "text-blue-500" },
 ];
 
 function CheckIcon({ className }: { className?: string }) {
@@ -67,7 +67,7 @@ function CheckIcon({ className }: { className?: string }) {
 export default function TurnstilesPage() {
   return (
     <>
-      <div className="min-h-screen bg-[var(--background)]">
+      <div className="min-h-screen bg-white text-gray-900">
         {/* Hero – turnstiles background with blue overlay */}
         <motion.section
           className="relative min-h-[320px] flex flex-col items-center justify-center overflow-hidden"
@@ -84,7 +84,7 @@ export default function TurnstilesPage() {
               sizes="100vw"
               priority
             />
-            <div className="absolute inset-0 bg-slate-900/70" />
+            <div className="absolute inset-0 bg-gray-900/70" />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(6,182,212,0.15),transparent)]" />
           </div>
           <div className="relative z-10 text-center px-6">
@@ -107,13 +107,13 @@ export default function TurnstilesPage() {
                 Home
               </Link>
               <span className="mx-2 text-white/60">/</span>
-              <span className="text-cyan-300 font-medium">Turnstiles</span>
+              <span className="text-blue-300 font-medium">Turnstiles</span>
             </motion.nav>
           </div>
         </motion.section>
 
         {/* Main content – tripod turnstile image left, text right */}
-        <section className="py-16 lg:py-24 bg-slate-900 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
               <motion.div
@@ -123,7 +123,7 @@ export default function TurnstilesPage() {
                 viewport={viewport}
                 transition={{ duration: 0.7, ease: smoothEase }}
               >
-                <div className="relative aspect-[4/3] max-w-xl mx-auto lg:max-w-none rounded-2xl overflow-hidden shadow-xl border border-slate-600/80 bg-slate-800">
+                <div className="relative aspect-[4/3] max-w-xl mx-auto lg:max-w-none rounded-2xl overflow-hidden shadow-xl border border-gray-200 bg-gray-50">
                   <Image
                     src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=85"
                     alt="Stainless steel tripod turnstile with barrier arms"
@@ -141,10 +141,10 @@ export default function TurnstilesPage() {
                 viewport={viewport}
                 transition={{ duration: 0.7, ease: smoothEase, delay: 0.1 }}
               >
-                <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl">
+                <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl lg:text-4xl">
                   Tripod Turnstiles
                 </h2>
-                <p className="mt-6 text-slate-300 leading-relaxed text-base sm:text-lg">
+                <p className="mt-6 text-gray-600 leading-relaxed text-base sm:text-lg">
                   InOps&apos; single-lane turnstile series designed for smooth and silent operation and draws very little power. It is made of stainless steel which makes it highly durable. It is compact and designed to operate in small workspaces.
                 </p>
               </motion.div>
@@ -153,13 +153,13 @@ export default function TurnstilesPage() {
         </section>
 
         {/* Features – three numbered blocks */}
-        <section className="py-16 lg:py-24 bg-slate-800/50 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-gray-50/50 border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
               {numberedFeatures.map((item, i) => (
                 <motion.div
                   key={item.title}
-                  className="rounded-xl border border-slate-600/80 bg-slate-800/80 p-6 backdrop-blur-sm"
+                  className="rounded-xl border border-gray-200 bg-gray-50/80 p-6 backdrop-blur-sm"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={viewport}
@@ -168,8 +168,8 @@ export default function TurnstilesPage() {
                   <div className={`flex h-10 w-10 items-center justify-center rounded-full ${item.color} text-lg font-bold text-white`}>
                     {item.number}
                   </div>
-                  <h3 className="mt-4 text-lg font-bold text-slate-100">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-300">{item.description}</p>
+                  <h3 className="mt-4 text-lg font-bold text-gray-900">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-gray-600">{item.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -177,10 +177,10 @@ export default function TurnstilesPage() {
         </section>
 
         {/* Features – heading and four bullet points */}
-        <section className="py-16 lg:py-24 bg-slate-900 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-4xl px-6 lg:px-12">
             <motion.h2
-              className="text-center text-2xl font-bold text-white sm:text-3xl"
+              className="text-center text-2xl font-bold text-gray-900 sm:text-3xl"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -189,7 +189,7 @@ export default function TurnstilesPage() {
               Features
             </motion.h2>
             <div
-              className="mx-auto mt-2 h-0.5 w-16 rounded-full bg-cyan-500"
+              className="mx-auto mt-2 h-0.5 w-16 rounded-full bg-blue-500"
               aria-hidden
             />
             <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -205,7 +205,7 @@ export default function TurnstilesPage() {
                   <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-md border-2 border-current">
                     <CheckIcon className={`h-4 w-4 ${item.color}`} />
                   </span>
-                  <p className="text-slate-200 font-medium">{item.text}</p>
+                  <p className="text-gray-700 font-medium">{item.text}</p>
                 </motion.div>
               ))}
             </div>
@@ -213,20 +213,20 @@ export default function TurnstilesPage() {
         </section>
 
         {/* Product Specifications */}
-        <section className="py-16 lg:py-24 bg-slate-800/50 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-gray-50/50 border-t border-gray-200">
           <div className="mx-auto max-w-3xl px-6 lg:px-12">
             <motion.div
-              className="rounded-xl border border-slate-600/80 bg-slate-800/80 shadow-sm overflow-hidden backdrop-blur-sm"
+              className="rounded-xl border border-gray-200 bg-gray-50/80 shadow-sm overflow-hidden backdrop-blur-sm"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
               transition={{ duration: 0.5, ease: smoothEase }}
             >
-              <div className="divide-y divide-slate-600/80">
+              <div className="divide-y divide-gray-200">
                 {productSpecs.map((row) => (
                   <div key={row.label} className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 px-6 py-4">
-                    <dt className="text-sm font-medium text-slate-400">{row.label}</dt>
-                    <dd className="text-sm font-semibold text-slate-100">{row.value}</dd>
+                    <dt className="text-sm font-medium text-gray-500">{row.label}</dt>
+                    <dd className="text-sm font-semibold text-gray-900">{row.value}</dd>
                   </div>
                 ))}
               </div>
@@ -246,10 +246,10 @@ function WhyChooseUsSection() {
   const slides = whyChooseSlides;
 
   return (
-    <section className="py-16 lg:py-24 bg-slate-900 border-t border-slate-700/80">
+    <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <motion.h2
-          className="text-center text-2xl font-bold text-white sm:text-3xl"
+          className="text-center text-2xl font-bold text-gray-900 sm:text-3xl"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={viewport}
@@ -257,7 +257,7 @@ function WhyChooseUsSection() {
         >
           Why Choose Us
         </motion.h2>
-        <div className="mx-auto mt-2 h-0.5 w-20 rounded-full bg-cyan-500" aria-hidden />
+        <div className="mx-auto mt-2 h-0.5 w-20 rounded-full bg-blue-500" aria-hidden />
         <div className="mt-14 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
           {/* Left: network/tree graphic with icon circles */}
           <motion.div
@@ -314,8 +314,8 @@ function WhyChooseUsSection() {
                 exit={{ opacity: 0, x: -12 }}
                 transition={{ duration: 0.3, ease: smoothEase }}
               >
-                <h3 className="text-xl font-bold text-slate-100 sm:text-2xl">{slides[slideIndex].title}</h3>
-                <p className="mt-4 text-slate-300 leading-relaxed">{slides[slideIndex].text}</p>
+                <h3 className="text-xl font-bold text-gray-900 sm:text-2xl">{slides[slideIndex].title}</h3>
+                <p className="mt-4 text-gray-600 leading-relaxed">{slides[slideIndex].text}</p>
               </motion.div>
             </AnimatePresence>
             <div className="mt-8 flex items-center gap-4">
@@ -325,7 +325,7 @@ function WhyChooseUsSection() {
                     key={i}
                     onClick={() => setSlideIndex(i)}
                     className={`h-2 w-2 rounded-full transition-colors ${
-                      i === slideIndex ? "bg-violet-500 scale-110" : "bg-slate-300 hover:bg-slate-400"
+                      i === slideIndex ? "bg-violet-500 scale-110" : "bg-gray-300 hover:bg-gray-400"
                     }`}
                     aria-label={`Go to slide ${i + 1}`}
                   />
@@ -334,14 +334,14 @@ function WhyChooseUsSection() {
               <div className="flex gap-1">
                 <button
                   onClick={() => setSlideIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1))}
-                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-600 text-slate-300 hover:bg-slate-700"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-100"
                   aria-label="Previous"
                 >
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
                 </button>
                 <button
                   onClick={() => setSlideIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1))}
-                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-600 text-slate-300 hover:bg-slate-700"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-100"
                   aria-label="Next"
                 >
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>

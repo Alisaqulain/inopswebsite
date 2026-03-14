@@ -111,7 +111,7 @@ function ServiceIcon({ icon }: { icon: string }) {
 export default function VisitorManagementPage() {
   return (
     <>
-      <div className="min-h-screen bg-[var(--background)]">
+      <div className="min-h-screen bg-white text-gray-900">
         {/* Hero – dark with reception-style backdrop */}
         <motion.section
           className="relative min-h-[320px] flex flex-col items-center justify-center overflow-hidden"
@@ -119,7 +119,7 @@ export default function VisitorManagementPage() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="absolute inset-0 bg-slate-800" />
+          <div className="absolute inset-0 bg-gray-900" />
           <div className="absolute inset-0 opacity-20">
             <Image
               src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=60"
@@ -130,11 +130,11 @@ export default function VisitorManagementPage() {
               priority
             />
           </div>
-          <div className="absolute inset-0 bg-slate-900/85" />
+          <div className="absolute inset-0 bg-gray-900/70" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(6,182,212,0.12),transparent)]" />
           {/* Reception-style badge */}
-          <div className="absolute bottom-[20%] left-1/2 -translate-x-1/2 rounded-2xl border border-white/20 bg-slate-700/60 px-8 py-3 backdrop-blur-sm">
-            <span className="text-lg font-semibold tracking-widest text-slate-200">RECEPTION</span>
+          <div className="absolute bottom-[20%] left-1/2 -translate-x-1/2 rounded-2xl border border-cyan-400/50 bg-gray-800/90 px-8 py-3 backdrop-blur-sm shadow-lg">
+            <span className="text-lg font-semibold tracking-widest text-white">RECEPTION</span>
           </div>
           <div className="relative z-10 text-center px-6">
             <motion.h1
@@ -146,23 +146,23 @@ export default function VisitorManagementPage() {
               Visitor Management
             </motion.h1>
             <motion.nav
-              className="mt-4 text-sm text-white/90"
+              className="mt-4 text-sm text-white"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: smoothEase, delay: 0.25 }}
               aria-label="Breadcrumb"
             >
-              <Link href="/" className="hover:text-white transition-colors">
+              <Link href="/" className="text-white hover:text-white/90 transition-colors">
                 Home
               </Link>
-              <span className="mx-2 text-white/60">/</span>
-              <span className="text-cyan-300 font-medium">Visitor Management</span>
+              <span className="mx-2 text-white/80">/</span>
+              <span className="text-blue-400 font-medium">Visitor Management</span>
             </motion.nav>
           </div>
         </motion.section>
 
         {/* Content – flow diagram left, text right */}
-        <section className="py-16 lg:py-24 bg-slate-900 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
               {/* Left – visitor flow diagram: person at kiosk + connected nodes */}
@@ -249,10 +249,10 @@ export default function VisitorManagementPage() {
                 viewport={viewport}
                 transition={{ duration: 0.6, ease: smoothEase, delay: 0.1 }}
               >
-                <h2 className="text-2xl font-bold text-white sm:text-3xl lg:text-4xl">
+                <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl lg:text-4xl">
                   Visitor Management
                 </h2>
-                <p className="mt-6 text-slate-300 leading-relaxed text-base sm:text-lg">
+                <p className="mt-6 text-gray-600 leading-relaxed text-base sm:text-lg">
                   Welcome to the future of visitor management with InOps Company&apos;s innovative Visitor Management System. Designed to revolutionize how organizations handle visitor tracking and security, our system offers a comprehensive suite of features tailored to meet the unique needs of modern businesses. Let&apos;s explore the eight key features and their corresponding benefits:
                 </p>
               </motion.div>
@@ -261,10 +261,10 @@ export default function VisitorManagementPage() {
         </section>
 
         {/* Features & Benefits */}
-        <section className="py-16 lg:py-24 bg-slate-800/50 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <motion.h2
-              className="text-center text-2xl font-bold text-white sm:text-3xl"
+              className="text-center text-2xl font-bold text-gray-900 sm:text-3xl"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -287,9 +287,9 @@ export default function VisitorManagementPage() {
                     <CheckIcon className="h-5 w-5 text-white" />
                   </span>
                   <div className="space-y-2">
-                    <h3 className="font-bold text-slate-100">{item.title}</h3>
-                    <p className="text-slate-300 text-sm leading-relaxed">{item.description}</p>
-                    <p className="font-semibold text-cyan-300 text-sm">{item.benefit}</p>
+                    <h3 className="font-bold text-gray-900">{item.title}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+                    <p className="font-semibold text-blue-600 text-sm">{item.benefit}</p>
                   </div>
                 </motion.div>
               ))}
@@ -298,10 +298,10 @@ export default function VisitorManagementPage() {
         </section>
 
         {/* Visitor Management System – intro title + paragraph */}
-        <section className="py-12 lg:py-16 bg-slate-900 border-t border-slate-700/80">
+        <section className="py-12 lg:py-16 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-4xl px-6 lg:px-12 text-center">
             <motion.h2
-              className="text-2xl font-bold text-white sm:text-3xl"
+              className="text-2xl font-bold text-gray-900 sm:text-3xl"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -311,7 +311,7 @@ export default function VisitorManagementPage() {
             </motion.h2>
             <div className="mx-auto mt-2 h-0.5 w-24 rounded-full bg-cyan-500" aria-hidden />
             <motion.p
-              className="mt-6 text-slate-300 leading-relaxed text-base sm:text-lg"
+              className="mt-6 text-gray-600 leading-relaxed text-base sm:text-lg"
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -323,7 +323,7 @@ export default function VisitorManagementPage() {
         </section>
 
         {/* Two flow circles – Scheduled visits & Walk-up visits */}
-        <section className="py-16 lg:py-24 bg-slate-800/50 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-6xl px-6 lg:px-12">
             <motion.div
               className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16"
@@ -337,7 +337,7 @@ export default function VisitorManagementPage() {
                 <div className="relative w-64 h-64 rounded-full bg-blue-700 flex items-center justify-center border-2 border-cyan-400/40 shadow-xl">
                   <span className="text-white font-bold text-center text-lg px-4">Scheduled visits</span>
                 </div>
-                <ul className="mt-6 space-y-2 w-full max-w-xs text-sm text-slate-300">
+                <ul className="mt-6 space-y-2 w-full max-w-xs text-sm text-gray-600">
                   {scheduledSteps.map((step, i) => (
                     <li key={i} className="flex items-center gap-2">
                       <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 flex-shrink-0" />
@@ -351,7 +351,7 @@ export default function VisitorManagementPage() {
                 <div className="relative w-64 h-64 rounded-full bg-cyan-600 flex items-center justify-center border-2 border-cyan-400/40 shadow-xl">
                   <span className="text-white font-bold text-center text-lg px-4">Walk-up visits</span>
                 </div>
-                <ul className="mt-6 space-y-2 w-full max-w-xs text-sm text-slate-300">
+                <ul className="mt-6 space-y-2 w-full max-w-xs text-sm text-gray-600">
                   {walkUpSteps.map((step, i) => (
                     <li key={i} className="flex items-center gap-2">
                       <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 flex-shrink-0" />
@@ -365,10 +365,10 @@ export default function VisitorManagementPage() {
         </section>
 
         {/* Powerful Services for Your Business */}
-        <section className="py-16 lg:py-24 bg-slate-900 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <motion.h2
-              className="text-2xl font-bold text-white sm:text-3xl"
+              className="text-2xl font-bold text-gray-900 sm:text-3xl"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -381,7 +381,7 @@ export default function VisitorManagementPage() {
               {powerfulServices.map((service, i) => (
                 <motion.div
                   key={service.title}
-                  className="flex items-start gap-4 rounded-xl border border-slate-600/80 bg-slate-800/80 p-6 backdrop-blur-sm"
+                  className="flex items-start gap-4 rounded-xl border border-gray-200 bg-white p-6 backdrop-blur-sm"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={viewport}
@@ -390,7 +390,7 @@ export default function VisitorManagementPage() {
                   <span className={`flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg ${service.color} text-white`}>
                     <ServiceIcon icon={service.icon} />
                   </span>
-                  <h3 className="font-semibold text-slate-100">{service.title}</h3>
+                  <h3 className="font-semibold text-gray-900">{service.title}</h3>
                 </motion.div>
               ))}
             </div>
@@ -398,7 +398,7 @@ export default function VisitorManagementPage() {
         </section>
 
         {/* Empowering Smarter Workplaces + phone mockup */}
-        <section className="py-16 lg:py-24 bg-slate-800/50 border-t border-slate-700/80">
+        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
               <motion.div
@@ -408,15 +408,15 @@ export default function VisitorManagementPage() {
                 viewport={viewport}
                 transition={{ duration: 0.6, ease: smoothEase }}
               >
-                <h2 className="text-2xl font-bold text-cyan-400 sm:text-3xl">
+                <h2 className="text-2xl font-bold text-blue-400 sm:text-3xl">
                   Empowering Smarter Workplaces Across all Industries
                 </h2>
-                <p className="mt-6 text-slate-300 leading-relaxed text-base sm:text-lg">
+                <p className="mt-6 text-gray-600 leading-relaxed text-base sm:text-lg">
                   InOps Tech empowers smarter workplaces across diverse industries by providing innovative technology solutions tailored to optimize efficiency, collaboration, and productivity.
                 </p>
                 <Link
                   href="/contact"
-                  className="mt-8 inline-flex items-center rounded-xl bg-cyan-600 px-6 py-3 font-semibold text-white shadow-lg shadow-cyan-500/25 transition hover:bg-cyan-500"
+                  className="mt-8 inline-flex items-center rounded-xl bg-blue-500 px-6 py-3 font-semibold text-white shadow-lg transition hover:bg-blue-600"
                 >
                   Get Started
                 </Link>
@@ -428,17 +428,17 @@ export default function VisitorManagementPage() {
                 viewport={viewport}
                 transition={{ duration: 0.6, ease: smoothEase, delay: 0.1 }}
               >
-                <div className="relative w-[280px] rounded-[2.5rem] border-[10px] border-slate-800 bg-slate-800 p-2 shadow-2xl">
-                  <div className="absolute left-1/2 top-0 h-6 w-24 -translate-x-1/2 rounded-b-2xl bg-slate-800" aria-hidden />
-                  <div className="overflow-hidden rounded-[1.5rem] bg-slate-800 border border-slate-600/80">
-                    <div className="bg-slate-700/80 px-4 py-3 border-b border-slate-600/80 flex items-center justify-between">
-                      <span className="font-semibold text-slate-100 text-sm">My Attendance</span>
+                <div className="relative w-[280px] rounded-[2.5rem] border-[10px] border-gray-200 bg-gray-50 p-2 shadow-2xl">
+                  <div className="absolute left-1/2 top-0 h-6 w-24 -translate-x-1/2 rounded-b-2xl bg-gray-50" aria-hidden />
+                  <div className="overflow-hidden rounded-[1.5rem] bg-gray-50 border border-gray-200">
+                    <div className="bg-gray-200/80 px-4 py-3 border-b border-gray-200 flex items-center justify-between">
+                      <span className="font-semibold text-gray-900 text-sm">My Attendance</span>
                     </div>
-                    <div className="flex gap-2 px-3 py-2 border-b border-slate-600/80">
-                      <span className="text-xs font-medium text-cyan-400 py-1 px-2 rounded bg-cyan-500/20">week</span>
-                      <span className="text-xs text-slate-400 py-1 px-2">month</span>
+                    <div className="flex gap-2 px-3 py-2 border-b border-gray-200">
+                      <span className="text-xs font-medium text-blue-400 py-1 px-2 rounded bg-cyan-500/20">week</span>
+                      <span className="text-xs text-gray-400 py-1 px-2">month</span>
                     </div>
-                    <div className="px-3 py-2 text-xs text-slate-400 text-center">15-Jan-2026 - 18-Jan-2026</div>
+                    <div className="px-3 py-2 text-xs text-gray-400 text-center">15-Jan-2026 - 18-Jan-2026</div>
                     <div className="px-3 pb-2 space-y-1.5">
                       {[
                         { label: "ARRIVAL", time: "09:00", color: "bg-emerald-500" },
@@ -449,12 +449,12 @@ export default function VisitorManagementPage() {
                       ].map((item, i) => (
                         <div key={i} className="flex items-center gap-2 text-xs">
                           <span className={`w-1.5 h-6 rounded-full ${item.color}`} aria-hidden />
-                          <span className="text-slate-400">{item.label}</span>
-                          <span className="text-slate-200 ml-auto">{item.time}</span>
+                          <span className="text-gray-400">{item.label}</span>
+                          <span className="text-gray-600 ml-auto">{item.time}</span>
                         </div>
                       ))}
                     </div>
-                    <div className="p-3 border-t border-slate-600/80 text-center text-sm text-slate-400">Total Hours 08:43</div>
+                    <div className="p-3 border-t border-gray-200 text-center text-sm text-gray-400">Total Hours 08:43</div>
                   </div>
                 </div>
               </motion.div>

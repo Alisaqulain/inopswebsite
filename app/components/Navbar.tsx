@@ -78,21 +78,20 @@ export default function Navbar() {
     };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [mobileOpen]);
+  }, []);
 
   return (
     <motion.header
       initial={false}
+      style={{ position: "fixed", top: 0, left: 0, right: 0 }}
       animate={{
-        backgroundColor: scrolled ? "rgba(15, 23, 42, 0.92)" : "rgba(15, 23, 42, 0)",
+        backgroundColor: scrolled ? "rgba(255, 255, 255, 0.98)" : "rgba(0, 0, 0, 0)",
         backdropFilter: scrolled ? "blur(12px)" : "blur(0px)",
-        borderBottomColor: scrolled ? "rgba(255, 255, 255, 0.08)" : "rgba(255, 255, 255, 0)",
-        boxShadow: scrolled ? "0 1px 3px 0 rgba(0,0,0,0.2)" : "0 0 0 0 transparent",
+        borderBottomColor: scrolled ? "rgba(0, 0, 0, 0.06)" : "rgba(255, 255, 255, 0)",
+        boxShadow: scrolled ? "0 1px 3px 0 rgba(0,0,0,0.06)" : "0 0 0 0 transparent",
       }}
       transition={headerTransition}
-      className={`sticky top-0 z-[100] overflow-visible border-b border-transparent px-6 py-3.5 lg:px-12 ${
-        scrolled ? "w-full" : "w-[90%] mx-auto rounded-2xl mt-4"
-      }`}
+      className={`navbar-fixed-header w-full shrink-0 overflow-visible border-b border-transparent px-6 py-3.5 lg:px-12`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         <motion.div
@@ -106,13 +105,13 @@ export default function Navbar() {
               alt="InOps solutions"
               width={140}
               height={40}
-              className="h-8 w-auto object-contain brightness-0 invert opacity-95"
+              className={`h-8 w-auto object-contain transition-all duration-300 ${scrolled ? "opacity-90" : "opacity-95 drop-shadow-[0_0_12px_rgba(255,255,255,0.3)]"}`}
               priority
             />
           </Link>
         </motion.div>
 
-        <nav className="hidden items-center gap-1 md:flex">
+        <nav className="hidden items-center gap-3 md:flex">
           {navItems.map((item, i) =>
             hasDropdown(item) ? (
               <motion.div
@@ -129,7 +128,9 @@ export default function Navbar() {
                 >
                   <motion.button
                     type="button"
-                    className="relative flex items-center gap-1 px-3 py-2 text-sm font-medium text-slate-300 transition-colors hover:text-white rounded-lg hover:bg-slate-700/80"
+                    className={`relative flex items-center gap-1 px-4 py-2.5 text-base font-medium tracking-wide rounded-lg transition-colors ${
+                      scrolled ? "text-gray-600 hover:text-gray-900 hover:bg-gray-100" : "text-white hover:text-white/90 hover:bg-white/10"
+                    }`}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
@@ -153,7 +154,7 @@ export default function Navbar() {
                         transition={dropdownTransition}
                         className="absolute left-0 top-full z-[100] pt-2 min-w-[220px] origin-top-left"
                       >
-                        <div className="rounded-xl border border-slate-600/80 bg-slate-800/95 py-2 shadow-lg shadow-slate-900/50 backdrop-blur-xl">
+                        <div className="rounded-xl border border-gray-200 bg-white py-2 shadow-lg shadow-gray-200/80">
                           {item.dropdown.map((d, j) => {
                             const href = resolveHref(item.label, d);
                             return (
@@ -165,7 +166,7 @@ export default function Navbar() {
                               >
                                 <Link
                                   href={href}
-                                  className="block px-4 py-2.5 text-sm text-slate-200 transition-colors hover:bg-slate-700/80 hover:text-cyan-300"
+                                  className="block px-4 py-2.5 text-sm text-gray-700 transition-colors hover:bg-blue-50 hover:text-blue-600"
                                 >
                                   {d}
                                 </Link>
@@ -185,9 +186,11 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.08 + i * linkStagger, ease: "easeOut" }}
               >
-                <Link href={item.href} className="relative block px-3 py-2">
+                <Link href={item.href} className="relative block px-4 py-2.5">
                   <motion.span
-                    className="relative inline-block text-sm font-medium text-slate-300 transition-colors hover:text-white"
+                    className={`relative inline-block text-base font-medium tracking-wide transition-colors ${
+                      scrolled ? "text-gray-600 hover:text-gray-900" : "text-white hover:text-white/90"
+                    }`}
                     whileHover="hover"
                     whileTap={{ scale: 0.98 }}
                     variants={{
@@ -196,7 +199,7 @@ export default function Navbar() {
                   >
                     {item.label}
                     <motion.span
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-cyan-400 rounded-full"
+                      className={`absolute bottom-0 left-0 right-0 h-0.5 rounded-full ${scrolled ? "bg-blue-500" : "bg-white"}`}
                       style={{ transformOrigin: "left" }}
                       variants={{
                         hover: { scaleX: 1 },
@@ -219,7 +222,9 @@ export default function Navbar() {
         >
           <motion.button
             type="button"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-600/80 bg-slate-800/80 text-slate-300 transition-colors hover:bg-slate-700 hover:border-cyan-500/80 hover:text-cyan-300 md:hidden"
+            className={`flex h-10 w-10 items-center justify-center rounded-full border shadow-sm transition-colors md:hidden ${
+              scrolled ? "border-gray-200 bg-white text-gray-600 hover:bg-gray-50 hover:border-blue-200 hover:text-blue-600" : "border-white/40 bg-white/10 text-white hover:bg-white/20"
+            }`}
             aria-label="Open menu"
             onClick={() => setMobileOpen(true)}
             whileHover={{ scale: 1.05 }}
@@ -231,7 +236,9 @@ export default function Navbar() {
           </motion.button>
           <Link href="/contact">
             <motion.span
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-600/80 bg-slate-800/80 text-slate-300 transition-colors hover:bg-slate-700 hover:border-cyan-500/80 hover:text-cyan-300 md:hidden"
+              className={`flex h-10 w-10 items-center justify-center rounded-full border shadow-sm transition-colors md:hidden ${
+                scrolled ? "border-gray-200 bg-white text-gray-600 hover:bg-gray-50 hover:border-blue-200 hover:text-blue-600" : "border-white/40 bg-white/10 text-white hover:bg-white/20"
+              }`}
               aria-label="Contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -243,7 +250,9 @@ export default function Navbar() {
           </Link>
           <Link href="/contact">
             <motion.span
-              className="hidden md:inline-flex items-center gap-2 rounded-full bg-cyan-500 px-4 py-2.5 text-sm font-semibold text-slate-900 shadow-sm transition-colors hover:bg-cyan-400"
+              className={`hidden md:inline-flex items-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold shadow-sm transition-all ${
+                scrolled ? "bg-blue-500 text-white hover:bg-blue-600 hover:shadow-md" : "border-2 border-white text-white hover:bg-white hover:text-gray-900"
+              }`}
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -259,24 +268,24 @@ export default function Navbar() {
             <motion.button
               type="button"
               aria-label="Close menu overlay"
-              className="fixed inset-0 z-50 bg-slate-950 backdrop-blur-xl md:hidden"
+              className="fixed inset-0 z-50 bg-gray-900/20 backdrop-blur-sm md:hidden"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setMobileOpen(false)}
             />
             <motion.aside
-              className="fixed right-0 top-0 z-50 h-full w-[88vw] max-w-sm border-l border-slate-700/80 bg-slate-950 backdrop-blur-xl md:hidden"
+              className="fixed right-0 top-0 z-50 h-full w-[88vw] max-w-sm border-l border-gray-200 bg-white shadow-xl md:hidden"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "tween", duration: 0.25, ease: [0.33, 1, 0.68, 1] as const }}
             >
-              <div className="flex items-center justify-between border-b border-slate-700/80 px-5 py-4">
-                <span className="text-sm font-semibold tracking-wide text-slate-200">Menu</span>
+              <div className="flex items-center justify-between border-b border-gray-100 px-5 py-4">
+                <span className="text-sm font-semibold tracking-wide text-gray-800">Menu</span>
                 <button
                   type="button"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-700/80 bg-slate-800 text-slate-200"
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 bg-gray-50 text-gray-600 hover:bg-gray-100"
                   aria-label="Close menu"
                   onClick={() => setMobileOpen(false)}
                 >
@@ -286,7 +295,7 @@ export default function Navbar() {
                 </button>
               </div>
 
-              <div className="px-5 py-4 bg-slate-900 backdrop-blur-xl">
+              <div className="px-5 py-4 bg-gray-50/80">
                 <div className="space-y-2">
                   {navItems.map((item) => {
                     if (!hasDropdown(item)) {
@@ -294,11 +303,11 @@ export default function Navbar() {
                         <Link
                           key={item.label}
                           href={item.href}
-                          className="flex items-center justify-between rounded-xl border border-slate-700/80 bg-slate-800/90 px-4 py-3 text-sm font-medium text-slate-200"
+                          className="flex items-center justify-between rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 shadow-sm hover:border-blue-200 hover:bg-blue-50/50"
                           onClick={() => setMobileOpen(false)}
                         >
                           {item.label}
-                          <span className="text-slate-400" aria-hidden>
+                          <span className="text-gray-400" aria-hidden>
                             →
                           </span>
                         </Link>
@@ -307,14 +316,14 @@ export default function Navbar() {
 
                     const isOpen = mobileSection === item.label;
                     return (
-                      <div key={item.label} className="rounded-xl border border-slate-700/80 bg-slate-800/90">
+                      <div key={item.label} className="rounded-xl border border-gray-200 bg-white shadow-sm">
                         <button
                           type="button"
-                          className="flex w-full items-center justify-between px-4 py-3 text-sm font-semibold text-slate-200"
+                          className="flex w-full items-center justify-between px-4 py-3 text-sm font-semibold text-gray-800"
                           onClick={() => setMobileSection((prev) => (prev === item.label ? null : item.label))}
                         >
                           <span>{item.label}</span>
-                          <span className={`text-slate-400 transition-transform ${isOpen ? "rotate-180" : ""}`} aria-hidden>
+                          <span className={`text-gray-500 transition-transform ${isOpen ? "rotate-180" : ""}`} aria-hidden>
                             <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                             </svg>
@@ -329,14 +338,14 @@ export default function Navbar() {
                               transition={{ duration: 0.2, ease: "easeOut" }}
                               className="overflow-hidden"
                             >
-                              <div className="space-y-1 px-2 pb-3">
+                              <div className="space-y-1 border-t border-gray-100 px-2 pb-3 pt-1">
                                 {item.dropdown.map((d) => {
                                   const href = resolveHref(item.label, d);
                                   return (
                                     <Link
                                       key={d}
                                       href={href}
-                                      className="block rounded-lg px-3 py-2 text-sm text-slate-300 hover:bg-slate-700/70 hover:text-cyan-300"
+                                      className="block rounded-lg px-3 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600"
                                       onClick={() => setMobileOpen(false)}
                                     >
                                       {d}
@@ -354,18 +363,18 @@ export default function Navbar() {
 
                 <Link
                   href="/all-pages"
-                  className="mt-4 flex items-center justify-between rounded-xl border border-slate-700/80 bg-slate-800/90 px-4 py-3 text-sm font-medium text-slate-200"
+                  className="mt-4 flex items-center justify-between rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 shadow-sm hover:border-blue-200 hover:bg-blue-50/50"
                   onClick={() => setMobileOpen(false)}
                 >
                   All Pages
-                  <span className="text-slate-400" aria-hidden>
+                  <span className="text-gray-400" aria-hidden>
                     →
                   </span>
                 </Link>
 
                 <Link
                   href="/contact"
-                  className="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-cyan-600 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-cyan-500/15 transition hover:bg-cyan-500"
+                  className="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-blue-500 px-4 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-blue-600"
                   onClick={() => setMobileOpen(false)}
                 >
                   Get Started
@@ -377,4 +386,4 @@ export default function Navbar() {
       </AnimatePresence>
     </motion.header>
   );
-} 
+}

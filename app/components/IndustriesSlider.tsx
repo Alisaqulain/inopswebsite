@@ -12,12 +12,12 @@ const industries = [
 
 function IndustryCard({ name, imageUrl }: { name: string; imageUrl: string }) {
   return (
-    <div className="industry-card group w-[280px] flex-shrink-0 overflow-hidden rounded-2xl border border-slate-600/80 bg-slate-800 shadow-depth transition hover:-translate-y-1 hover:border-teal-200/60 hover:shadow-depth-lg sm:w-[320px]">
-      <div className="relative aspect-[4/3] overflow-hidden bg-slate-200">
+    <div className="industry-card group w-[280px] flex-shrink-0 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-md transition hover:-translate-y-1 hover:shadow-lg hover:border-blue-100 sm:w-[320px]">
+      <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
         <Image src={imageUrl} alt={name} fill className="object-cover transition duration-300 group-hover:scale-105" sizes="320px" />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-4">
-          <h3 className="text-lg font-bold text-white drop-shadow-md">{name}</h3>
+          <h3 className="text-lg font-heading text-white drop-shadow-md">{name}</h3>
         </div>
       </div>
     </div>
@@ -26,15 +26,14 @@ function IndustryCard({ name, imageUrl }: { name: string; imageUrl: string }) {
 
 export default function IndustriesSlider() {
   return (
-    <section className="relative py-16 lg:py-24">
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-50 to-white bg-grid-pattern opacity-20" />
+    <section className="relative py-28 lg:py-40 bg-white">
       <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
         <div className="text-center">
           <span className="section-badge">Industries</span>
-          <h2 className="mt-4 text-center text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h2 className="mt-4 text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Industries We Serve
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-slate-300">
+          <p className="mx-auto mt-3 max-w-xl text-gray-600">
             Trusted across manufacturing, logistics, construction, and more
           </p>
         </div>
