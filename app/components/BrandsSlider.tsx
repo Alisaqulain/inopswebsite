@@ -49,7 +49,8 @@ function LogoCard({ src }: { src: string }) {
 
 export default function BrandsSlider() {
   return (
-    <section className="relative overflow-x-hidden border-y border-gray-100 bg-gradient-to-b from-white via-gray-50 to-white py-16 sm:py-20 lg:py-24">
+    <section className="relative overflow-x-hidden border-y border-gray-100 bg-gradient-to-b from-white via-gray-50 to-white py-16 sm:py-20 lg:py-24 noise-overlay">
+      <div className="pointer-events-none absolute inset-0 bg-dot-grid-subtle opacity-40" aria-hidden />
       <div className="mx-auto max-w-7xl px-4 lg:px-12">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-blue-600/80">Trusted by industry leaders</p>
@@ -59,7 +60,7 @@ export default function BrandsSlider() {
           <div className="mx-auto mt-5 h-1 w-12 rounded-full bg-blue-500/80" aria-hidden />
         </div>
 
-        <div className="relative mt-10 overflow-hidden rounded-3xl border border-gray-200/70 bg-white/70 py-10 shadow-sm shadow-gray-900/5 backdrop-blur">
+        <div className="relative mt-10 overflow-hidden rounded-3xl border border-gray-200/70 bg-white/70 py-10 shadow-depth backdrop-blur">
           {/* Edge fades */}
           <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-white via-white/80 to-transparent" aria-hidden />
           <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-white via-white/80 to-transparent" aria-hidden />
