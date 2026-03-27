@@ -431,3 +431,35 @@ button, a, [role="button"] {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+/* Global gutters + wider container for large displays */
+:root {
+  --page-gutter: clamp(0.75rem, 1.6vw, 1.5rem);
+}
+
+/* Reduce side padding on most sections */
+.px-6 {
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
+}
+
+/* Tailwind's lg:px-12 can feel too wide on desktop */
+@media (min-width: 1024px) {
+  .lg\:px-12 {
+    padding-left: var(--page-gutter);
+    padding-right: var(--page-gutter);
+  }
+}
+
+/* Use more screen width on bigger monitors */
+@media (min-width: 1280px) {
+  .max-w-7xl {
+    max-width: min(100rem, calc(100vw - (2 * var(--page-gutter))));
+  }
+}
+
+@media (min-width: 1536px) {
+  .max-w-7xl {
+    max-width: min(110rem, calc(100vw - (2 * var(--page-gutter))));
+  }
+}

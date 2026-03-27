@@ -6,15 +6,15 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const HERO_IMAGES = [
   {
-    src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=85",
+    src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=3200&q=90",
     alt: "Team collaboration and workforce management",
   },
   {
-    src: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&q=85",
+    src: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=3200&q=90",
     alt: "Corporate team meeting",
   },
   {
-    src: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&q=85",
+    src: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=3200&q=90",
     alt: "Software dashboard and analytics",
   },
 ];
