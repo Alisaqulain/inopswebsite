@@ -52,9 +52,8 @@ function FooterLink({ href, children }: { href: string; children: React.ReactNod
   return (
     <Link
       href={href}
-      className="group inline-flex items-center gap-1.5 text-sm text-slate-400 transition-colors hover:text-white"
+      className="text-sm text-slate-400 underline-offset-4 transition-colors hover:text-white hover:underline"
     >
-      <span className="h-px w-0 bg-blue-400 transition-all duration-300 group-hover:w-3" aria-hidden />
       {children}
     </Link>
   );
@@ -208,10 +207,7 @@ export default function Footer() {
           <p className="text-xs text-slate-500">
             © {new Date().getFullYear()} InOps Solutions. All rights reserved.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-500">
-            <span className="hidden sm:inline text-slate-600" aria-hidden>
-              ·
-            </span>
+          <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-slate-500" aria-label="Footer">
             <Link href="/blog" className="transition hover:text-slate-300">
               Resources
             </Link>
@@ -221,7 +217,7 @@ export default function Footer() {
             <a href="mailto:contact@inops.tech" className="transition hover:text-slate-300">
               Partner enquiries
             </a>
-          </div>
+          </nav>
         </div>
       </div>
     </footer>
