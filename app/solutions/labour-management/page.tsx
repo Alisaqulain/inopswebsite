@@ -185,7 +185,7 @@ export default function LabourManagementPage() {
         </motion.section>
 
         {/* Intro – title, underline, paragraph */}
-        <section className="py-12 lg:py-16 bg-white border-t border-gray-200">
+        <section className="py-6 lg:py-8 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-4xl px-6 lg:px-12 text-center">
             <motion.h2
               className="text-2xl font-bold text-gray-900 sm:text-3xl"
@@ -210,7 +210,7 @@ export default function LabourManagementPage() {
         </section>
 
         {/* Main content – arrow insight boxes left, intro text right */}
-        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
+        <section className="py-8 lg:py-12 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
               {/* Left – vertical stack of arrow-shaped insight boxes */}
@@ -266,7 +266,7 @@ export default function LabourManagementPage() {
         </section>
 
         {/* Features & Benefits */}
-        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
+        <section className="py-8 lg:py-12 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <motion.h2
               className="text-center text-2xl font-bold text-gray-900 sm:text-3xl"
@@ -303,7 +303,7 @@ export default function LabourManagementPage() {
         </section>
 
         {/* Application screenshots – Timesheet+ Manager (desktop) + TOKN User (mobile) */}
-        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
+        <section className="py-8 lg:py-12 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-6xl px-6 lg:px-12">
             <motion.div
               className="relative flex flex-col items-center gap-8 lg:flex-row lg:justify-center lg:items-start"
@@ -386,7 +386,7 @@ export default function LabourManagementPage() {
         </section>
 
         {/* Powerful Services for Your Business */}
-        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
+        <section className="py-8 lg:py-12 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <motion.h2
               className="text-2xl font-bold text-gray-900 sm:text-3xl"
@@ -419,7 +419,7 @@ export default function LabourManagementPage() {
         </section>
 
         {/* Empowering Smarter Workplaces + phone mockup */}
-        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
+        <section className="py-8 lg:py-12 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
               <motion.div

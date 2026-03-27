@@ -49,7 +49,7 @@ function LogoCard({ src }: { src: string }) {
 
 export default function BrandsSlider() {
   return (
-    <section className="relative overflow-x-hidden border-y border-gray-100 bg-gradient-to-b from-white via-gray-50 to-white py-16 sm:py-20 lg:py-24 noise-overlay">
+    <section className="relative overflow-x-hidden border-y border-gray-100 bg-gradient-to-b from-white via-gray-50 to-white py-8 sm:py-10 lg:py-12 noise-overlay">
       <div className="pointer-events-none absolute inset-0 bg-dot-grid-subtle opacity-40" aria-hidden />
       <div className="mx-auto max-w-7xl px-4 lg:px-12">
         <div className="mx-auto max-w-3xl text-center">

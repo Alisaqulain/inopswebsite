@@ -97,7 +97,7 @@ export default function BlogPage() {
         </motion.section>
 
         {/* Blog posts grid */}
-        <section className="py-28 lg:py-40 bg-gray-50">
+        <section className="py-10 lg:py-14 bg-gray-50">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:gap-12">
               {posts.map((post, i) => (

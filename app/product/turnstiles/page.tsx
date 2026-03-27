@@ -113,7 +113,7 @@ export default function TurnstilesPage() {
         </motion.section>
 
         {/* Main content – tripod turnstile image left, text right */}
-        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
+        <section className="py-8 lg:py-12 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
               <motion.div
@@ -153,7 +153,7 @@ export default function TurnstilesPage() {
         </section>
 
         {/* Features – three numbered blocks */}
-        <section className="py-16 lg:py-24 bg-gray-50/50 border-t border-gray-200">
+        <section className="py-8 lg:py-12 bg-gray-50/50 border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
               {numberedFeatures.map((item, i) => (
@@ -177,7 +177,7 @@ export default function TurnstilesPage() {
         </section>
 
         {/* Features – heading and four bullet points */}
-        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
+        <section className="py-8 lg:py-12 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-4xl px-6 lg:px-12">
             <motion.h2
               className="text-center text-2xl font-bold text-gray-900 sm:text-3xl"
@@ -213,7 +213,7 @@ export default function TurnstilesPage() {
         </section>
 
         {/* Product Specifications */}
-        <section className="py-16 lg:py-24 bg-gray-50/50 border-t border-gray-200">
+        <section className="py-8 lg:py-12 bg-gray-50/50 border-t border-gray-200">
           <div className="mx-auto max-w-3xl px-6 lg:px-12">
             <motion.div
               className="rounded-xl border border-gray-200 bg-gray-50/80 shadow-sm overflow-hidden backdrop-blur-sm"
@@ -246,7 +246,7 @@ function WhyChooseUsSection() {
   const slides = whyChooseSlides;
 
   return (
-    <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
+    <section className="py-8 lg:py-12 bg-white border-t border-gray-200">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <motion.h2
           className="text-center text-2xl font-bold text-gray-900 sm:text-3xl"

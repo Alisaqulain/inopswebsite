@@ -87,7 +87,7 @@ export default function ContactPage() {
         </motion.section>
 
         {/* Contact info + form + map */}
-        <section className="py-28 lg:py-40 bg-white">
+        <section className="py-10 lg:py-14 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             {/* Two columns: contact info (left) + form (right) */}
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">

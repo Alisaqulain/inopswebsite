@@ -135,7 +135,7 @@ export default function AboutPage() {
         </motion.section>
 
         {/* About InOps: intro + 4 images + differentiators */}
-        <section className="py-28 lg:py-40 bg-white">
+        <section className="py-10 lg:py-14 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
               {/* Left: featured image + 4 images grid */}
@@ -239,7 +239,7 @@ export default function AboutPage() {
         </section>
 
         {/* Our workspace / culture - image strip */}
-        <section className="py-28 lg:py-40 bg-gray-50">
+        <section className="py-10 lg:py-14 bg-gray-50">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <motion.h2
               className="text-center text-2xl font-bold text-gray-900 sm:text-3xl"
@@ -283,7 +283,7 @@ export default function AboutPage() {
         </section>
 
         {/* Why Choose Us: tech tree visual + Expertise card */}
-        <section className="border-t border-gray-200 bg-white py-28 lg:py-40">
+        <section className="border-t border-gray-200 bg-white py-10 lg:py-14">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <motion.h2
               className="text-center text-2xl font-bold text-gray-900 sm:text-3xl"

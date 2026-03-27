@@ -152,7 +152,7 @@ export default function Home() {
       </SectionFade>
 
       {/* Why Inops */}
-      <AnimatedSection id="about" className="relative bg-white py-24 lg:py-32">
+      <AnimatedSection id="about" className="relative bg-white py-10 lg:py-12">
         <div className="pointer-events-none absolute inset-0 bg-dot-grid-subtle opacity-50" aria-hidden />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
           <div className="text-center">
@@ -166,7 +166,7 @@ export default function Home() {
               InOps combines workforce visibility, airtight compliance, and hardware integration into one platform—so your teams stay focused on operations, not chasing attendance sheets and paperwork.
             </AnimatedParagraph>
           </div>
-          <AnimatedCardGrid className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 perspective-3d">
+          <AnimatedCardGrid className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 perspective-3d">
             {whyCards.map((card, index) => {
               const directions: Array<"left" | "right" | "bottom" | "top"> = ["left", "right", "bottom", "top", "left"];
 
@@ -256,7 +256,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-black/40" />
           </motion.div>
 
-          <div className="relative mx-auto flex min-h-[min(90vh,46rem)] max-w-7xl flex-col items-center justify-center px-6 py-16 text-center text-white lg:px-12">
+          <div className="relative mx-auto flex min-h-[min(72vh,38rem)] max-w-7xl flex-col items-center justify-center px-6 py-10 text-center text-white lg:px-12">
             <motion.div
               className="w-full max-w-5xl rounded-3xl border border-white/10 bg-white/5 px-6 py-10 shadow-depth-xl backdrop-blur-md sm:px-10 sm:py-12"
               initial={{ opacity: 0, y: 22 }}
@@ -389,10 +389,10 @@ export default function Home() {
         <div className="max-w-full">
           <div className="overflow-hidden rounded-3xl border-2 border-b-0 border-blue-200 bg-white shadow-depth-lg mr-[-5] shadow-gray-900/5">
             {/* Feature cards — 3-up layout (per reference image) */}
-            <section className="bg-white py-16 lg:py-20">
+            <section className="bg-white py-8 lg:py-10">
               <div className="mx-auto max-w-7xl px-6 lg:px-12">
                 <motion.div
-                  className="grid grid-cols-1 gap-10 lg:grid-cols-3"
+                  className="grid grid-cols-1 gap-6 lg:grid-cols-3"
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.18 }}
@@ -609,7 +609,7 @@ export default function Home() {
       {/* <SectionFade><BrandsSlider /></SectionFade> */}
 
       {/* Contact */}
-      <SectionFade id="contact" className="relative py-28 lg:py-40">
+      <SectionFade id="contact" className="relative py-10 lg:py-14">
         <div className="relative">
           <div className="grid overflow-hidden  lg:grid-cols-[57%_43%]">
             {/* Left image (separate from form component) */}

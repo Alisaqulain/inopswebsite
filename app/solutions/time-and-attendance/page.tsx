@@ -145,7 +145,7 @@ export default function TimeAndAttendancePage() {
         </motion.section>
 
         {/* Main content – title, intro, benefits diagram, description */}
-        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
+        <section className="py-8 lg:py-12 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-start">
               {/* Left: title + circular benefits infographic */}
@@ -246,7 +246,7 @@ export default function TimeAndAttendancePage() {
         </section>
 
         {/* Features & Benefits */}
-        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
+        <section className="py-8 lg:py-12 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <motion.h2
               className="text-center text-2xl font-bold text-white sm:text-3xl"
@@ -286,7 +286,7 @@ export default function TimeAndAttendancePage() {
         </section>
 
         {/* Time & Attendance Biometric Device – title + empowerment paragraph */}
-        <section className="py-12 lg:py-16 bg-white border-t border-gray-200">
+        <section className="py-6 lg:py-8 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-4xl px-6 lg:px-12 text-center">
             <motion.h2
               className="text-2xl font-bold text-white sm:text-3xl"
@@ -311,7 +311,7 @@ export default function TimeAndAttendancePage() {
         </section>
 
         {/* Product visualization – device + software on monitor */}
-        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
+        <section className="py-8 lg:py-12 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
               <motion.div
@@ -373,7 +373,7 @@ export default function TimeAndAttendancePage() {
         </section>
 
         {/* Powerful Services for Your Business */}
-        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
+        <section className="py-8 lg:py-12 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <motion.h2
               className="text-2xl font-bold text-white sm:text-3xl"
@@ -406,7 +406,7 @@ export default function TimeAndAttendancePage() {
         </section>
 
         {/* Empowering Smarter Workplaces + mobile app */}
-        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
+        <section className="py-8 lg:py-12 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
               <motion.div

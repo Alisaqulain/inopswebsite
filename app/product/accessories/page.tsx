@@ -121,7 +121,7 @@ export default function AccessoriesPage() {
         </motion.section>
 
         {/* Main content – section title + two products */}
-        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
+        <section className="py-8 lg:py-12 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <motion.h2
               className="text-2xl font-bold text-gray-900 sm:text-3xl"
@@ -168,7 +168,7 @@ export default function AccessoriesPage() {
         </section>
 
         {/* FP Sensor & RF Cards */}
-        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
+        <section className="py-8 lg:py-12 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16 lg:gap-20">
               {fpSensorAndRfCards.map((product, i) => (
@@ -199,7 +199,7 @@ export default function AccessoriesPage() {
         </section>
 
         {/* Electro-Magnetic Locks – SL-600 & DL-600 */}
-        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
+        <section className="py-8 lg:py-12 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16 lg:gap-20">
               {electroMagneticLocks.map((product, i) => (

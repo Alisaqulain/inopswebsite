@@ -162,7 +162,7 @@ export default function VisitorManagementPage() {
         </motion.section>
 
         {/* Content – flow diagram left, text right */}
-        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
+        <section className="py-8 lg:py-12 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
               {/* Left – visitor flow diagram: person at kiosk + connected nodes */}
@@ -261,7 +261,7 @@ export default function VisitorManagementPage() {
         </section>
 
         {/* Features & Benefits */}
-        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
+        <section className="py-8 lg:py-12 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <motion.h2
               className="text-center text-2xl font-bold text-gray-900 sm:text-3xl"
@@ -298,7 +298,7 @@ export default function VisitorManagementPage() {
         </section>
 
         {/* Visitor Management System – intro title + paragraph */}
-        <section className="py-12 lg:py-16 bg-white border-t border-gray-200">
+        <section className="py-6 lg:py-8 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-4xl px-6 lg:px-12 text-center">
             <motion.h2
               className="text-2xl font-bold text-gray-900 sm:text-3xl"
@@ -323,7 +323,7 @@ export default function VisitorManagementPage() {
         </section>
 
         {/* Two flow circles – Scheduled visits & Walk-up visits */}
-        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
+        <section className="py-8 lg:py-12 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-6xl px-6 lg:px-12">
             <motion.div
               className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16"
@@ -365,7 +365,7 @@ export default function VisitorManagementPage() {
         </section>
 
         {/* Powerful Services for Your Business */}
-        <section className="py-16 lg:py-24 bg-white border-t border-gray-200">
+        <section className="py-8 lg:py-12 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <motion.h2
               className="text-2xl font-bold text-gray-900 sm:text-3xl"
@@ -398,7 +398,7 @@ export default function VisitorManagementPage() {
         </section>
 
         {/* Empowering Smarter Workplaces + phone mockup */}
-        <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-200">
+        <section className="py-8 lg:py-12 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
               <motion.div

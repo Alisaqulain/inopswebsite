@@ -95,7 +95,7 @@ export default function BrochuresPage() {
         </motion.section>
 
         {/* Intro */}
-        <section className="py-12 lg:py-16 bg-gray-50 border-t border-gray-200">
+        <section className="py-6 lg:py-8 bg-gray-50 border-t border-gray-200">
           <div className="mx-auto max-w-3xl px-6 lg:px-12 text-center">
             <motion.p
               className="text-gray-600 leading-relaxed text-base sm:text-lg"
@@ -110,7 +110,7 @@ export default function BrochuresPage() {
         </section>
 
         {/* Brochures grid */}
-        <section className="py-28 lg:py-40 bg-white border-t border-gray-200">
+        <section className="py-10 lg:py-14 bg-white border-t border-gray-200">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
               {brochures.map((brochure, i) => (

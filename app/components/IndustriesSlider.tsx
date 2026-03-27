@@ -26,7 +26,7 @@ function IndustryCard({ name, imageUrl }: { name: string; imageUrl: string }) {
 
 export default function IndustriesSlider() {
   return (
-    <section className="relative py-28 lg:py-40 bg-white">
+    <section className="relative py-10 lg:py-14 bg-white">
       <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
         <div className="text-center">
           <span className="section-badge">Industries</span>
@@ -37,7 +37,7 @@ export default function IndustriesSlider() {
             Trusted across manufacturing, logistics, construction, and more
           </p>
         </div>
-        <div className="hover-pause relative mt-12 overflow-hidden">
+        <div className="hover-pause relative mt-8 overflow-hidden">
           <div className="flex w-max gap-6 md:gap-8 animate-marquee-slow" style={{ willChange: "transform" }}>
             {[...industries, ...industries].map((ind, i) => (
               <IndustryCard key={`${ind.name}-${i}`} name={ind.name} imageUrl={ind.imageUrl} />

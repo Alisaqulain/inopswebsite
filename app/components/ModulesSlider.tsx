@@ -106,9 +106,9 @@ export default function ModulesSlider() {
   }, []);
 
   return (
-    <section id="solutions" className="relative py-28 lg:py-40">
+    <section id="solutions" className="relative py-10 lg:py-14">
       <div className="relative mx-auto max-w-full lg:px-12">
-        <div className="flex flex-col gap-10 lg:flex-row lg:items-stretch lg:gap-12">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-stretch lg:gap-8">
           {/* Left: text block */}
           <div className="flex flex-shrink-0 flex-col justify-center items-center text-center lg:items-start lg:text-left lg:w-[28%] xl:w-[26%]">
             <span className="section-badge">Solutions</span>

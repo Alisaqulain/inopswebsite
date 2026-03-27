@@ -30,7 +30,7 @@ const resourcePages = [
 
 export default function AllPages() {
   return (
-    <div className="min-h-screen bg-white px-6 py-16 text-gray-900">
+    <div className="min-h-screen bg-white px-6 py-8 text-gray-900">
       <div className="mx-auto max-w-2xl">
         <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">All Pages</h1>
         <p className="mt-2 text-gray-600">Quick links to every page on the site.</p>

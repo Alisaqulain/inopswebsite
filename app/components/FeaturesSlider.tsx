@@ -50,7 +50,7 @@ export default function FeaturesSlider() {
   const slide = slides[current];
 
   return (
-    <section className="py-28 lg:py-40 bg-white">
+    <section className="py-10 lg:py-14 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="rounded-2xl border border-gray-200 bg-white shadow-lg overflow-hidden">
           <div className="flex flex-col md:flex-row items-stretch">
